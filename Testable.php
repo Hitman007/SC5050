@@ -7,3 +7,5 @@ Version: 1.2
 Author: Jim Maguire
 Author URI: http://customrayguns.com/
 */
+
+die('yo');
