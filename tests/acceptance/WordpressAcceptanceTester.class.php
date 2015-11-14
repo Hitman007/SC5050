@@ -10,8 +10,8 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 		$I->see('Log In');
 		switch ($role) {
 			case "admin":
-				$I->fillField('log', 'CustomRayGuns');
-				$I->fillField('pwd', 'Karlinski123$');
+				$I->fillField('log', 'Tester');
+				$I->fillField('pwd', 'Tester123$');
 				$I->click('Log In');
 				$I->see('Howdy');
 				break;
