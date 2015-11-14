@@ -2,7 +2,5 @@
 
 include 'WordpressAcceptanceTester.class.php';
 $I = new CustomRayGuns\WordpressAcceptanceTester($scenario);
-$I->wantTo('Login to Wordpress on \localhost as an admin');
+$I->wantTo('Login to Wordpress as an admin');
 $I->loginWordpressAs('admin');
-//$I->see('Log In');
-//$I->amOnPage( wp_login_url() );
