@@ -6,7 +6,7 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 	
 	public function loginWordpressAs($role) {
 		$I = $this;
-		$I->amOnPage('http://localhost/wp-login.php');
+		$I->amOnPage('http://ec2-54-175-20-216.compute-1.amazonaws.com/wp-login.php');
 		$I->see('Log In');
 		switch ($role) {
 			case "admin":
