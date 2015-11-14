@@ -13,7 +13,7 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 				$I->fillField('log', 'CustomRayGuns');
 				$I->fillField('pwd', 'Karlinski123$');
 				$I->click('Log In');
-				$I->see('Howdy, CustomRayGuns');
+				$I->see('Howdy');
 				break;
 			default:
 				throw new \Exception('login role not recognized');
