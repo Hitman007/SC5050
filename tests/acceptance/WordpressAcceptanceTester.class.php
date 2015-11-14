@@ -10,11 +10,10 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 		$I->see('Log In');
 		switch ($role) {
 			case "admin":
-				$I->fillField('log', 'Hitman007');
+				$I->fillField('log', 'CustomRayGuns');
 				$I->fillField('pwd', 'Karlinski123$');
-				$I->fillField('log', 'Hitman007');
 				$I->click('Log In');
-				$I->see('Howdy, Hitman007');
+				$I->see('Howdy, CustomRayGuns');
 				break;
 			default:
 				throw new \Exception('login role not recognized');
