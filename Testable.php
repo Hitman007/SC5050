@@ -8,3 +8,4 @@ Author: Jim Maguire
 Author URI: http://customrayguns.com/
 */
 
+echo ("<script>alert('Hello!');</script>");
