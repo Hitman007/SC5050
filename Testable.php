@@ -8,4 +8,4 @@ Author: Jim Maguire
 Author URI: http://customrayguns.com/
 */
 
-echo ("<script>alert('Hello!');</script>");
+//echo ("<script>alert('Hello! Testable plugin.');</script>");
