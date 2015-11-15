@@ -15,8 +15,10 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 		$I->see('Log In');
 		switch ($role) {
 			case "admin":
-				$I->fillField('log', 'Tester');
-				$I->fillField('pwd', 'Tester123$');
+				global $CRG_adminRoleUserName; //This variable is set in the tests/_bootstrap.php file
+				$I->fillField('log', $CRG_adminRoleUserName);
+				global $CRG_adminRoleUserPassword; //This variable is set in the tests/_bootstrap.php file
+				$I->fillField('pwd', $CRG_adminRoleUserPassword);
 				$I->click('Log In');
 				$I->see('Howdy');
 				break;
