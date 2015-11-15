@@ -23,8 +23,6 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 	
 	public function seeThisPluginIsActivated($pluginName){
 		$I = $this;
-		$x = "See that the plugin '$pluginName' is activated";
-		$I->wantTo($x);
 		$x = "sudo wp plugin status $pluginName --allow-root";
 		$str = shell_exec($x);
 		if (strpos($str, 'Active') !== FALSE){
