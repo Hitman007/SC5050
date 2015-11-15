@@ -4,6 +4,8 @@ namespace CustomRayGuns;
 
 class WordpressAcceptanceTester extends \AcceptanceTester{
 	
+	use abilityToSeeActivatedPlugins;
+	
 	public function loginWordpressAs($role) {
 		$I = $this;
 		$I->amOnPage('http://ec2-54-175-20-216.compute-1.amazonaws.com/wp-login.php');
@@ -19,16 +21,5 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 				throw new \Exception('login role not recognized');
 				break;
 		}
-	}
-	
-	public function seeThisPluginIsActivated($pluginName){
-		$I = $this;
-		$x = "sudo wp plugin status $pluginName --allow-root";
-		$str = shell_exec($x);
-		if (strpos($str, 'Active') !== FALSE){
-		 }else{
-		 	$x = "The plugin $pluginName is not activated";
-    			throw new \Exception($x);
-		 }
 	}
 }
