@@ -7,7 +7,7 @@ trait abilityToLoginWordpressAsRole{
 	public function loginWordpressAs($role) {
 		$I = $this;
 		global $CRG_homePageURL; //This variable is set in the tests/_bootstrap.php file
-		$I->amOnPage($CRG_homePageURL);
+		$I->amOnPage($CRG_loginPageURL);
 		$I->see('Log In');
 		switch ($role) {
 			case "admin":
