@@ -10,7 +10,8 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 	
 	public function loginWordpressAs($role) {
 		$I = $this;
-		$I->amOnPage('http://ec2-54-175-20-216.compute-1.amazonaws.com/wp-login.php');
+		global $CRG_homePageURL; //This variable is set in the tests/_bootstrap.php file
+		$I->amOnPage($CRG_homePageURL);
 		$I->see('Log In');
 		switch ($role) {
 			case "admin":
