@@ -1,3 +1,7 @@
+<?php
+
+namespace CustomRayGuns;
+
 trait abilityToSeeActivatedPlugins{
 
 	function seeThisPluginIsActivated($pluginName){
