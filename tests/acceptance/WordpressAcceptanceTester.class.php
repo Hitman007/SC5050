@@ -30,7 +30,7 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 		if (strpos($str, 'Active') !== FALSE){
 		 }else{
 		 	$x = "The plugin $pluginName is not active";
-    			throw new Exception($x);
+    			throw new \Exception($x);
 		 }
 	}
 }
