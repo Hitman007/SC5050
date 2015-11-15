@@ -4,7 +4,7 @@ namespace CustomRayGuns;
 
 trait abilityToSeeActivatedPlugins{
 
-	function seeThisPluginIsActivated($pluginName){
+	public function seeThisPluginIsActivated($pluginName){
 		$I = $this;
 		$x = "sudo wp plugin status $pluginName --allow-root";
 		$str = shell_exec($x);
