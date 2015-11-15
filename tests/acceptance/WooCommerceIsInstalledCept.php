@@ -5,5 +5,5 @@
 include_once 'WordpressAcceptanceTester.class.php';
 $scenario = "assmunching";
 $I = new CustomRayGuns\WordpressAcceptanceTester($scenario);
-$I->wantTo('Make sure that a plugin is installed');
+$I->wantTo('Make sure that a plugin is activated');
 $I->seeThisPluginIsActivated('Testable');
