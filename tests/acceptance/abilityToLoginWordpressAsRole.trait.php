@@ -1,5 +1,7 @@
 <?php
 
+namespace CustomRayGuns;
+
 trait abilityToLoginWordpressAsRole{
 
 	public function loginWordpressAs($role) {
@@ -18,5 +20,4 @@ trait abilityToLoginWordpressAsRole{
 				break;
 		}
 	}
-	
 }
