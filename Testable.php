@@ -8,4 +8,7 @@ Author: Jim Maguire
 Author URI: http://customrayguns.com/
 */
 
-//echo ("<script>alert('Hello! Testable plugin.');</script>");
+namespace CustomRayGuns;
+
+include'php-autoloader/autoloader.php';
+$CustomProduct = new CustomProduct;
