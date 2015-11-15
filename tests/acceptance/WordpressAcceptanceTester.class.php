@@ -2,7 +2,7 @@
 
 namespace CustomRayGuns;
 
-class WordpressAcceptanceTester implements WordpressAcceptanceTesterInterface extends \AcceptanceTester{
+class WordpressAcceptanceTester extends \AcceptanceTester implements WordpressAcceptanceTesterInterface{
 	
 	use abilityToSeeActivatedPlugins;
 	
