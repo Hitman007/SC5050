@@ -6,6 +6,8 @@ class WordpressAcceptanceTester extends \AcceptanceTester{
 	
 	use abilityToSeeActivatedPlugins;
 	
+	use abilityToLoginWordpressAsRole;
+	
 	public function loginWordpressAs($role) {
 		$I = $this;
 		$I->amOnPage('http://ec2-54-175-20-216.compute-1.amazonaws.com/wp-login.php');
