@@ -12,5 +12,5 @@ class WordpressAcceptanceTester extends \AcceptanceTester implements WordpressAc
 
 interface WordpressAcceptanceTesterInterface{
     public function seeThisPluginIsActivated();
-    public function loginWordpressAsRoles();
+    //public function loginWordpressAsRoles();
 }
