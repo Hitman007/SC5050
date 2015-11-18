@@ -2,7 +2,7 @@
 
 namespace CustomRayGuns;
 
-class CustomProduct(){
+class CustomProduct{
 
 public function __construct(){die('cp loaded>..................'):}
 
