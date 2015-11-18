@@ -10,5 +10,5 @@ Author URI: http://customrayguns.com/
 
 namespace CustomRayGuns;
 
-include'CustomRayGuns/php-autoloader/autoloader.php';
+require 'CustomRayGuns/php-autoloader/autoloader.php';
 $CustomProduct = new CustomProduct;
