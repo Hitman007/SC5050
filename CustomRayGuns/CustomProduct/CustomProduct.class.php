@@ -6,11 +6,6 @@ namespace CustomRayGuns;
 
 class CustomProduct{
 
-public function __construct(){
-	add_action( 'init', array($this, 'createCustomProduct' ) );
-
-register_activation_hook( __FILE__, array($this, 'createCustomProduct' ) );
-
 public function createCustomProduct(){
      $post = array(
      'post_author' => $user_id,
