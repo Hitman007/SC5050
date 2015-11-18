@@ -15,7 +15,7 @@ public function createCustomProduct(){
      'post_author' => $user_id,
      'post_content' => '',
      'post_status' => "publish",
-     'post_title' => 'South Carolina 50/50',
+     'post_title' => '50/50 Raffle Ticket',
      'post_parent' => '',
      'post_type' => "product",
 
