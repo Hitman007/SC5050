@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: Custom Ray Guns Testable
+Plugin Name: South Carolina 50/50
 Plugin URI: http://customrayguns.com/
 Description: 
-Version: 1.2
+Version: 0.1
 Author: Jim Maguire
 Author URI: http://customrayguns.com/
 */
 
 namespace CustomRayGuns;
 
-include'php-autoloader/autoloader.php';
+include'CustomRayGuns/php-autoloader/autoloader.php';
 $CustomProduct = new CustomProduct;
