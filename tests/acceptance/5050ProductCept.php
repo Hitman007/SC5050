@@ -7,4 +7,4 @@ $I->loginWordpressAs('admin');
 global $CRG_homePageURL; //This variable is set in the tests/_bootstrap.php file
 $productsPageURL = $CRG_homePageURL . "/wp-admin/edit.php?post_type=product";
 $I->amOnPage($productsPageURL);
-$I->see('SKU');
+$I->see('50/50 Raffle Ticket');
