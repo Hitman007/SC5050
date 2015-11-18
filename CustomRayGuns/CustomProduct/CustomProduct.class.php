@@ -15,7 +15,7 @@ public function createCustomProduct(){
      'post_author' => $user_id,
      'post_content' => '',
      'post_status' => "publish",
-     'post_title' => 'SC5050',
+     'post_title' => 'South Carolina 50/50',
      'post_parent' => '',
      'post_type' => "product",
 
