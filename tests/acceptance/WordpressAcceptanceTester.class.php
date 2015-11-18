@@ -2,17 +2,17 @@
 
 namespace CustomRayGuns;
 
-class WordpressAcceptanceTester extends \AcceptanceTester{
+class WordpressAcceptanceTester extends \AcceptanceTester implements WordpressAcceptanceTesterInterface{
 	
-	public function __construct(){die('WordpressAcceptanceTester line 7');}
+	//public function __construct(){die('WordpressAcceptanceTester line 7');}
 	
-	use abilityToSeeActivatedPlugins;
+	use abilityToSeeThisPluginIsActivatedPluginName;
 	
 	use abilityToLoginWordpressAsRole;
 	
 }
 
 interface WordpressAcceptanceTesterInterface{
-    public function seeThisPluginIsActivated($pluginName);
-    public function loginWordpressAsRoles($role);
+    public function thisPluginIsActivated($pluginName);
+    public function loginWordpressAs($role);
 }
