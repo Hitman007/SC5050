@@ -4,6 +4,8 @@ namespace CustomRayGuns;
 
 class WordpressAcceptanceTester extends \AcceptanceTester{
 	
+	public function __construct(){die('WordpressAcceptanceTester line 7');}
+	
 	use abilityToSeeActivatedPlugins;
 	
 	use abilityToLoginWordpressAsRole;
