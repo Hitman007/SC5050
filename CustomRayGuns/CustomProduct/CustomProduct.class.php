@@ -4,7 +4,7 @@
 
 namespace CustomRayGuns;
 
-public function createCustomProduct(){
+function createCustomProduct(){
      $post = array(
      'post_author' => $user_id,
      'post_content' => '',
