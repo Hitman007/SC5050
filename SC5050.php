@@ -15,3 +15,4 @@ namespace CustomRayGuns;
 require 'CustomRayGuns/php-autoloader/autoloader.php';
 //$CustomProduct = new CustomProduct;
 
+require 'CustomRayGuns/CustomProduct/CustomProduct.php';
