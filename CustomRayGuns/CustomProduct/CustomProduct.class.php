@@ -3,7 +3,7 @@
 //Creates a custom product
 
 namespace CustomRayGuns;
-die('balls');
+
 function createCustomProduct(){
      $post = array(
      'post_author' => $user_id,
