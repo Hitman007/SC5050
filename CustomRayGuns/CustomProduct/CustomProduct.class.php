@@ -4,8 +4,6 @@
 
 namespace CustomRayGuns;
 
-class CustomProduct{
-
 public function createCustomProduct(){
      $post = array(
      'post_author' => $user_id,
@@ -34,5 +32,4 @@ public function createCustomProduct(){
      update_post_meta( $post_id, '_regular_price', "666" );
      update_post_meta( $post_id, '_sale_price', "1" );
 
-}
 }
