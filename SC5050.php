@@ -10,9 +10,5 @@ Author URI: http://customrayguns.com/
 
 namespace CustomRayGuns;
 
-//die('South Carolina 50/50 active.');
-
-require 'CustomRayGuns/php-autoloader/autoloader.php';
-//$CustomProduct = new CustomProduct;
-
-require 'CustomRayGuns/CustomProduct/CustomProduct.php';
+require 'CustomRayGuns/createRaffleProduct/createRaffleProduct.php';
+//createRaffleProduct();
