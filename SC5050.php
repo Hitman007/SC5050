@@ -11,4 +11,6 @@ Author URI: http://customrayguns.com/
 namespace CustomRayGuns;
 
 require 'CustomRayGuns/createRaffleProduct/createRaffleProduct.php';
-//createRaffleProduct();
+
+
+createRaffleProduct();
