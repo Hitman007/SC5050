@@ -200,7 +200,7 @@ var showAll = true;
         <a href="#" title="Successful" onclick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 4</a>
       </li>
       <li>
-        <a href="#" title="Failed" onclick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a>
+        <a href="#" title="Failed" onclick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a>
       </li>
       <li>
         <a href="#" title="Skipped" onclick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a>
@@ -211,9 +211,28 @@ var showAll = true;
     </ul>
     <div class="layout">
       <h1>
-        Codeception Results <small><span style="color: green">OK</span> (2s)</small>
+        Codeception Results <small><span style="color: #e74c3c">FAILED</span> (11.1s)</small>
       </h1>
       <table border="0" style="width: 100%;">
+        <tr>
+          <td>
+            <h3>
+              Functional Tests
+            </h3>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('1', this)">
+              [+] Activate a plugin called balls (ActivatePluginCept) <span style="color: #34495e; font-size: 70%;">0.01s</span>
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1"></table>
+          </td>
+        </tr>
         <tr>
           <td>
             <h3>
@@ -221,26 +240,26 @@ var showAll = true;
             </h3>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioSuccess">
+        <tr class="scenarioRow scenarioFailed">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('1', this)">
-              [+] Make sure that custom products have been added (5050ProductCept) <span style="color: #34495e; font-size: 70%;">1.18s</span>
+            <p class="scenarioFailed" onclick="showHide('2', this)">
+              [+] Make sure that custom products have been added (5050ProductCept) <span style="color: #34495e; font-size: 70%;">6.4s</span>
             </p>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioSuccess">
+        <tr class="scenarioRow scenarioFailed">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
               <tr>
                 <td class="stepName">
-                  <p onclick="showHide('564ecee6f26ef', this)">
+                  <p onclick="showHide('564f13188582b', this)">
                     [+] I login wordpress as
                   </p>
                 </td>
               </tr>
               <tr>
                 <td class="nostyle">
-                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer564ecee6f26ef">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer564f13188582b">
                     <tr>
                       <td class="stepName">
                         I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
@@ -280,8 +299,26 @@ var showAll = true;
                 </td>
               </tr>
               <tr>
-                <td class="stepName">
+                <td class="stepName failedStep">
                   I see <span style="color: #732E81">"50/50 Raffle Ticket"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="error">
+                  Failed asserting that /wp-admin/edit.php?post_type=product<br>
+                  --&gt;<br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  Products ‹ Custom Ray Guns Remote — WordPress<br>
+                  <br>
+                  addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};<br>
+                  var ajaxurl = '/wp-admin/admi<br>
+                  [Content too long to display. See complete response in '_output' directory]<br>
+                  --&gt; contains "50/50 raffle ticket".
                 </td>
               </tr>
             </table>
@@ -289,24 +326,24 @@ var showAll = true;
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('2', this)">
-              [+] Login to wordpress as an admin (LoginToWordpressAsAnAdminCept) <span style="color: #34495e; font-size: 70%;">0.41s</span>
+            <p class="scenarioSuccess" onclick="showHide('3', this)">
+              [+] Login to wordpress as an admin (LoginToWordpressAsAnAdminCept) <span style="color: #34495e; font-size: 70%;">3.51s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
               <tr>
                 <td class="stepName">
-                  <p onclick="showHide('564ecee768335', this)">
+                  <p onclick="showHide('564f131c1361c', this)">
                     [+] I login wordpress as
                   </p>
                 </td>
               </tr>
               <tr>
                 <td class="nostyle">
-                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer564ecee768335">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer564f131c1361c">
                     <tr>
                       <td class="stepName">
                         I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
@@ -345,14 +382,14 @@ var showAll = true;
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('3', this)">
-              [+] Make sure that woocommerce is activated (WooCommerceIsActivatedCept) <span style="color: #34495e; font-size: 70%;">0.38s</span>
+            <p class="scenarioSuccess" onclick="showHide('4', this)">
+              [+] Make sure that woocommerce is activated (WooCommerceIsActivatedCept) <span style="color: #34495e; font-size: 70%;">1.14s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3"></table>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4"></table>
           </td>
         </tr>
         <tr>
@@ -364,14 +401,14 @@ var showAll = true;
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('4', this)">
+            <p class="scenarioSuccess" onclick="showHide('5', this)">
               [+] ExampleTest::testMe <span style="color: #34495e; font-size: 70%;">0s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4"></table>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5"></table>
           </td>
         </tr>
         <tr>
@@ -394,7 +431,7 @@ var showAll = true;
                     Failed scenarios:
                   </td>
                   <td class="scenarioFailedValue">
-                    <strong>0</strong>
+                    <strong>1</strong>
                   </td>
                 </tr>
                 <tr>

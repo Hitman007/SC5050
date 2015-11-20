@@ -10,6 +10,6 @@ Author URI: http://customrayguns.com/
 
 namespace CustomRayGuns;
 
-require 'CustomRayGuns/createRaffleProduct/createRaffleProduct.php';
+require 'CustomRayGuns/php-autoloader/autoloader.php';
 
-//createRaffleProduct();
+$RaffleProductCreator = new RaffleProductCreator;
