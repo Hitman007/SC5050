@@ -3,13 +3,13 @@
 require(dirname(__FILE__)."/../CustomRayGuns/php-autoloader/autoloader.php");
 
 global $CRG_homePageURL;
-$CRG_homePageURL = 'http://ec2-54-175-20-216.compute-1.amazonaws.com';
+$CRG_homePageURL = 'https://crg-remote-hitman007.c9users.io/';
 
 global $CRG_loginPageURL;
-$CRG_loginPageURL = 'http://ec2-54-175-20-216.compute-1.amazonaws.com/wp-login.php';
+$CRG_loginPageURL = $CRG_homePageURL . 'wp-login.php';
 
 global $CRG_adminRoleUserName;
-$CRG_adminRoleUserName = "Tester";
+$CRG_adminRoleUserName = "Jim";
 
 global $CRG_adminRoleUserPassword;
-$CRG_adminRoleUserPassword = "Tester123$";
+$CRG_adminRoleUserPassword = "Karlinski123$";

@@ -6,7 +6,7 @@ trait abilityToSeeThisPluginIsActivatedPluginName{
 
 	public function thisPluginIsActivated($pluginName){
 		$I = $this;
-		$x = "sudo wp plugin status $pluginName --allow-root";
+		$x = "wp plugin status $pluginName";
 		$str = shell_exec($x);
 		if (strpos($str, 'Active') !== FALSE){
 		 }else{
