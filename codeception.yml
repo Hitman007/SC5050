@@ -15,7 +15,7 @@ extensions:
 modules:
     config:
         Db:
-            dsn: ''
-            user: ''
+            dsn: 'mysql:host=localhost;dbname=c9'
+            user: 'hitman007'
             password: ''
-            dump: tests/_data/dump.sql
+            dump: tests/_data/C9backupfile.sql

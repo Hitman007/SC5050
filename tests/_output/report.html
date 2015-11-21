@@ -211,7 +211,7 @@ var showAll = true;
     </ul>
     <div class="layout">
       <h1>
-        Codeception Results <small><span style="color: #e74c3c">FAILED</span> (11.1s)</small>
+        Codeception Results <small><span style="color: #e74c3c">FAILED</span> (14.9s)</small>
       </h1>
       <table border="0" style="width: 100%;">
         <tr>
@@ -221,16 +221,22 @@ var showAll = true;
             </h3>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioSuccess">
+        <tr class="scenarioRow scenarioFailed">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('1', this)">
-              [+] Activate a plugin called balls (ActivatePluginCept) <span style="color: #34495e; font-size: 70%;">0.01s</span>
+            <p class="scenarioFailed" onclick="showHide('1', this)">
+              [+] Activate a plugin called sc5050 (ActivatePluginCept) <span style="color: #34495e; font-size: 70%;">0.02s</span>
             </p>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioSuccess">
+        <tr class="scenarioRow scenarioFailed">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1"></table>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+              <tr>
+                <td class="error">
+                  Call to undefined method CustomRayGuns\WordpressTester::resetTheDatabase
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
         <tr>
@@ -240,26 +246,26 @@ var showAll = true;
             </h3>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioFailed">
+        <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioFailed" onclick="showHide('2', this)">
-              [+] Make sure that custom products have been added (5050ProductCept) <span style="color: #34495e; font-size: 70%;">6.4s</span>
+            <p class="scenarioSuccess" onclick="showHide('2', this)">
+              [+] Make sure that custom products have been added (5050ProductCept) <span style="color: #34495e; font-size: 70%;">8.67s</span>
             </p>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioFailed">
+        <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
               <tr>
                 <td class="stepName">
-                  <p onclick="showHide('564f13188582b', this)">
+                  <p onclick="showHide('5650415a6d5d7', this)">
                     [+] I login wordpress as
                   </p>
                 </td>
               </tr>
               <tr>
                 <td class="nostyle">
-                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer564f13188582b">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5650415a6d5d7">
                     <tr>
                       <td class="stepName">
                         I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
@@ -299,26 +305,8 @@ var showAll = true;
                 </td>
               </tr>
               <tr>
-                <td class="stepName failedStep">
+                <td class="stepName">
                   I see <span style="color: #732E81">"50/50 Raffle Ticket"</span>
-                </td>
-              </tr>
-              <tr>
-                <td class="error">
-                  Failed asserting that /wp-admin/edit.php?post_type=product<br>
-                  --&gt;<br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  <br>
-                  Products ‹ Custom Ray Guns Remote — WordPress<br>
-                  <br>
-                  addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};<br>
-                  var ajaxurl = '/wp-admin/admi<br>
-                  [Content too long to display. See complete response in '_output' directory]<br>
-                  --&gt; contains "50/50 raffle ticket".
                 </td>
               </tr>
             </table>
@@ -327,23 +315,35 @@ var showAll = true;
         <tr class="scenarioRow scenarioSuccess">
           <td>
             <p class="scenarioSuccess" onclick="showHide('3', this)">
-              [+] Login to wordpress as an admin (LoginToWordpressAsAnAdminCept) <span style="color: #34495e; font-size: 70%;">3.51s</span>
+              [+] Make sure that woocommerce is activated (WooCommerceIsActivatedCept) <span style="color: #34495e; font-size: 70%;">1.49s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3">
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3"></table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('4', this)">
+              [+] Login to wordpress as an admin (WordpressTester/LoginToWordpressAsAnAdminCept) <span style="color: #34495e; font-size: 70%;">4.76s</span>
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4">
               <tr>
                 <td class="stepName">
-                  <p onclick="showHide('564f131c1361c', this)">
+                  <p onclick="showHide('56504160b8aa4', this)">
                     [+] I login wordpress as
                   </p>
                 </td>
               </tr>
               <tr>
                 <td class="nostyle">
-                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer564f131c1361c">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer56504160b8aa4">
                     <tr>
                       <td class="stepName">
                         I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
@@ -378,18 +378,6 @@ var showAll = true;
                 </td>
               </tr>
             </table>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <p class="scenarioSuccess" onclick="showHide('4', this)">
-              [+] Make sure that woocommerce is activated (WooCommerceIsActivatedCept) <span style="color: #34495e; font-size: 70%;">1.14s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4"></table>
           </td>
         </tr>
         <tr>

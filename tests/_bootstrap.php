@@ -13,3 +13,11 @@ $CRG_adminRoleUserName = "Jim";
 
 global $CRG_adminRoleUserPassword;
 $CRG_adminRoleUserPassword = "Karlinski123$";
+
+//used in abilityToResetTheDatabase.trait.php:
+global $CRG_DBuserName;
+global $CRG_DBname;
+global $CRG_DBsetupPath;
+$CRG_DBuserName = "hitman007";
+$CRG_DBname = "c9";
+$CRG_DBsetupPath = "~/workspace/wp-content/plugins/SC5050/tests/_data/C9backupfile.sql";
