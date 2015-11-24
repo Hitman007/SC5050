@@ -1,1 +1,1 @@
-tests/functional/ActivatePluginCept.php
+tests/acceptance/WoocommerceCustomProductsCept.php

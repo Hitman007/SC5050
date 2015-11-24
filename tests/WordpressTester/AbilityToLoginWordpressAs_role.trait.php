@@ -2,7 +2,7 @@
 
 namespace CustomRayGuns;
 
-trait abilityToLoginWordpressAsRole{
+trait AbilityToLoginWordpressAs_role{
 
 	public function loginWordpressAs($role) {
 		$I = $this;

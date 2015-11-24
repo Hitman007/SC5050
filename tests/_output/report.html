@@ -197,7 +197,7 @@ var showAll = true;
         <a href="#" title="Show all" onclick="showAllScenarios()">◯</a>
       </li>
       <li>
-        <a href="#" title="Successful" onclick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 4</a>
+        <a href="#" title="Successful" onclick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 2</a>
       </li>
       <li>
         <a href="#" title="Failed" onclick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a>
@@ -211,34 +211,9 @@ var showAll = true;
     </ul>
     <div class="layout">
       <h1>
-        Codeception Results <small><span style="color: #e74c3c">FAILED</span> (14.9s)</small>
+        Codeception Results <small><span style="color: #e74c3c">FAILED</span> (6.7s)</small>
       </h1>
       <table border="0" style="width: 100%;">
-        <tr>
-          <td>
-            <h3>
-              Functional Tests
-            </h3>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <p class="scenarioFailed" onclick="showHide('1', this)">
-              [+] Activate a plugin called sc5050 (ActivatePluginCept) <span style="color: #34495e; font-size: 70%;">0.02s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
-              <tr>
-                <td class="error">
-                  Call to undefined method CustomRayGuns\WordpressTester::resetTheDatabase
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
         <tr>
           <td>
             <h3>
@@ -248,24 +223,36 @@ var showAll = true;
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('2', this)">
-              [+] Make sure that custom products have been added (5050ProductCept) <span style="color: #34495e; font-size: 70%;">8.67s</span>
+            <p class="scenarioSuccess" onclick="showHide('1', this)">
+              [+] Make sure that the correct plugins are activated (ProperPluginsAreActivatedCept) <span style="color: #34495e; font-size: 70%;">3.15s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1"></table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <p class="scenarioFailed" onclick="showHide('2', this)">
+              [+] Make sure the sc5050 plugin activation works properly! (WoocommerceCustomProductsCept) <span style="color: #34495e; font-size: 70%;">3.56s</span>
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioFailed">
+          <td>
+            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
               <tr>
                 <td class="stepName">
-                  <p onclick="showHide('5650415a6d5d7', this)">
+                  <p onclick="showHide('56538c72bd215', this)">
                     [+] I login wordpress as
                   </p>
                 </td>
               </tr>
               <tr>
                 <td class="nostyle">
-                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5650415a6d5d7">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer56538c72bd215">
                     <tr>
                       <td class="stepName">
                         I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
@@ -278,12 +265,12 @@ var showAll = true;
                     </tr>
                     <tr>
                       <td class="stepName">
-                        I fill field <span style="color: #732E81">"log","Jim"</span>
+                        I fill field <span style="color: #732E81">"log","AutomaticTester"</span>
                       </td>
                     </tr>
                     <tr>
                       <td class="stepName">
-                        I fill field <span style="color: #732E81">"pwd","Karlinski123$"</span>
+                        I fill field <span style="color: #732E81">"pwd","(*(rX87JY5qW&amp;1!cPTz9NgI0"</span>
                       </td>
                     </tr>
                     <tr>
@@ -305,76 +292,35 @@ var showAll = true;
                 </td>
               </tr>
               <tr>
-                <td class="stepName">
+                <td class="stepName failedStep">
                   I see <span style="color: #732E81">"50/50 Raffle Ticket"</span>
                 </td>
               </tr>
-            </table>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <p class="scenarioSuccess" onclick="showHide('3', this)">
-              [+] Make sure that woocommerce is activated (WooCommerceIsActivatedCept) <span style="color: #34495e; font-size: 70%;">1.49s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3"></table>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <p class="scenarioSuccess" onclick="showHide('4', this)">
-              [+] Login to wordpress as an admin (WordpressTester/LoginToWordpressAsAnAdminCept) <span style="color: #34495e; font-size: 70%;">4.76s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer4">
               <tr>
-                <td class="stepName">
-                  <p onclick="showHide('56504160b8aa4', this)">
-                    [+] I login wordpress as
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td class="nostyle">
-                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer56504160b8aa4">
-                    <tr>
-                      <td class="stepName">
-                        I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="stepName">
-                        I see <span style="color: #732E81">"Log In"</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="stepName">
-                        I fill field <span style="color: #732E81">"log","Jim"</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="stepName">
-                        I fill field <span style="color: #732E81">"pwd","Karlinski123$"</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="stepName">
-                        I click <span style="color: #732E81">"Log In"</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="stepName">
-                        I see <span style="color: #732E81">"Howdy"</span>
-                      </td>
-                    </tr>
-                  </table>
+                <td class="error">
+                  Failed asserting that /wp-admin/edit.php?post_type=product<br>
+                  --&gt;<br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  WordPress › Error<br>
+                  <br>
+                  html {<br>
+                  background: #f1f1f1;<br>
+                  }<br>
+                  body {<br>
+                  background: #fff;<br>
+                  color: #444;<br>
+                  font-family: "Open Sans", sans-serif;<br>
+                  margin: 2em auto;<br>
+                  padding: 1em 2em;<br>
+                  max-width: 700px;<br>
+                  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.13);<br>
+                  box-shadow: 0 1px 3px rgba(0<br>
+                  [Content too long to display. See complete response in '_output' directory]<br>
+                  --&gt; contains "50/50 raffle ticket".
                 </td>
               </tr>
             </table>
@@ -389,14 +335,14 @@ var showAll = true;
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('5', this)">
+            <p class="scenarioSuccess" onclick="showHide('3', this)">
               [+] ExampleTest::testMe <span style="color: #34495e; font-size: 70%;">0s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5"></table>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer3"></table>
           </td>
         </tr>
         <tr>
@@ -411,7 +357,7 @@ var showAll = true;
                     Successful scenarios:
                   </td>
                   <td class="scenarioSuccessValue">
-                    <strong>4</strong>
+                    <strong>2</strong>
                   </td>
                 </tr>
                 <tr>

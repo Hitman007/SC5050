@@ -2,9 +2,9 @@
 
 namespace CustomRayGuns;
 
-trait abilityToSeeThisPluginIsActivatedPluginName{
+trait AbilityToSeePluginIsActivated_pluginName{
 
-	public function seeThisPluginIsActivated($pluginName){
+	public function seePluginIsActivated($pluginName){
 		$I = $this;
 		$x = "wp plugin status $pluginName";
 		$str = shell_exec($x);
