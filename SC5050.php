@@ -12,7 +12,7 @@ GitHub Plugin URI: https://github.com/Hitman007/SC5050
 
 namespace CustomRayGuns;
 
-die ("SC5050 is activated!");
+echo ("SC5050 is activated!");
 
 require 'CustomRayGuns/php-autoloader/autoloader.php';
 
