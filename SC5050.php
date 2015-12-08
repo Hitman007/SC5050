@@ -7,6 +7,7 @@ Version: 3.0
 Author: Jim Maguire
 Author URI: http://customrayguns.com/
 GitHub Plugin URI: Hitman007/SC5050
+GitHub Branch: master
 */
 
 namespace CustomRayGuns;
