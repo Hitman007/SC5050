@@ -12,11 +12,9 @@ trait AbilityToResetTheDatabase{
         
         //The initial state DB SQL file:
         global $CRG_DBsetupPath; // <-- set in the global _bootstrap.php file
-        
+
         //This command resets the database to the dump:
-        $string = "mysql -u $CRG_DBuserName $CRG_DBname < $CRG_DBsetupPath";
+        $string = "mysql -u $CRG_DBuserName $CRG_DBname < $SQL_DumpFile";
         shell_exec($string);
-        
     }
-    
 }

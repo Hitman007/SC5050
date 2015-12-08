@@ -20,7 +20,7 @@ global $CRG_DBname;
 global $CRG_DBsetupPath;
 $CRG_DBuserName = "hitman007";
 $CRG_DBname = "c9";
-$CRG_DBsetupPath = "~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_NoPluginsOrData.sql";
+$CRGDBsetupPath = "~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_NoPluginsOrData.sql";
 
 //Plugin under test:
 global $CRG_pLuginUnderTestVerboseName;
