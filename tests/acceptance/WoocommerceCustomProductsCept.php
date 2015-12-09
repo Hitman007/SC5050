@@ -22,7 +22,7 @@ $I->wantTo($makeSureThePluginUnderTestSlugNamePluginActivationWorksProperly);
     $I->seePluginIsActivated($CRG_pluginUnderTestSlugName); //This variable is set in the tests/_bootstrap.php file
     //The plugin Woocommerce is required for SC5050 to work:
     $I->seePluginIsActivated('woocommerce');
-    /*And*/ $I->resetTheDatabase('~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_PluginsActivated.sql');
+    /*And*/ //$I->resetTheDatabase('~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_PluginsActivated.sql');
 /*When*/ $I->loginWordpressAs/*an*/('admin');
     /*And*/ $I->amOnPage($productsPageURL); 
 /*Then*/ $I->/*should*/see('50/50 Raffle Ticket');
