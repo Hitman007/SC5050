@@ -2,9 +2,7 @@
 
 //Creates a custom raffleproduct
 
-namespace CustomRayGuns;
-
-
+namespace SC5050;
 
 class RaffleProductCreator{
 
