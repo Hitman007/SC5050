@@ -11,9 +11,10 @@ $productsPageURL = $CRG_homePageURL . "wp-admin/edit.php?post_type=product"; //D
 //************************    FEATURE   ***************************************
 //Custom products have been added to Woocommerce.
 // In order to sell 50/50 raffle tickets.
+//Feature: There are 50/50 Raffles Tickets
+
 $I = /*am a */ new CustomRayGuns\WordpressTester($scenario);
-$makeSureThePluginUnderTestSlugNamePluginActivationWorksProperly = "Make sure the $CRG_pluginUnderTestSlugName plugin activation works properly";
-$I->wantTo($makeSureThePluginUnderTestSlugNamePluginActivationWorksProperly);
+$I->wantTo("See that a product called 50/50 Raffle Ticket is there");
 //*****************************************************************************
 
 
@@ -22,7 +23,6 @@ $I->wantTo($makeSureThePluginUnderTestSlugNamePluginActivationWorksProperly);
     $I->seePluginIsActivated($CRG_pluginUnderTestSlugName); //This variable is set in the tests/_bootstrap.php file
     //The plugin Woocommerce is required for SC5050 to work:
     $I->seePluginIsActivated('woocommerce');
-    /*And*/ //$I->resetTheDatabase('~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_PluginsActivated.sql');
 /*When*/ $I->loginWordpressAs/*an*/('admin');
     /*And*/ $I->amOnPage($productsPageURL); 
 /*Then*/ $I->/*should*/see('50/50 Raffle Ticket');

@@ -1,7 +1,8 @@
 <?php
 
+namespace SC5050;
 
-class ExampleTest extends \Codeception\TestCase\Test
+class CustomProductPurchaceDetectorTest extends \Codeception\TestCase\Test
 {
     /**
      * @var \UnitTester

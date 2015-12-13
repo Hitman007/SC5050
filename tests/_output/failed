@@ -1,1 +1,3 @@
-tests/acceptance/WoocommerceCustomProductsCept.php
+tests/acceptance/5050RaffleProductAreThereCept.php
+tests/acceptance/ProperPluginsAreActivatedCept.php
+tests/acceptance/TicketPurchaseIsRegisterdAcrossSitesCept.php
