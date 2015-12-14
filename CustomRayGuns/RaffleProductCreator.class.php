@@ -7,12 +7,14 @@ namespace SC5050;
 class RaffleProductCreator{
 
     public function createRaffleProduct(){
+        //die('5');
         global $CRG_productName;
+        global $CRG_regularPrice;
         $post = array(
             'post_author' => $user_id,
             'post_content' => '',
             'post_status' => "publish",
-            'post_title' => $productName,
+            'post_title' => $CRG_productName,
             'post_parent' => '',
             'post_type' => "product",
         );
@@ -24,8 +26,7 @@ class RaffleProductCreator{
         update_post_meta( $post_id, 'total_sales', '0');
         update_post_meta( $post_id, '_downloadable', 'no');
         update_post_meta( $post_id, '_virtual', 'yes');
-        global $CRG_regularPrice;
-        update_post_meta( $post_id, '_regular_price', $CRG_regularPrice );
+        update_post_meta( $post_id, '_regular_price', $CRG_regularPrice);
         update_post_meta( $post_id, '_sale_price', "1" );
     }
 }
