@@ -18,9 +18,10 @@ require 'CustomRayGuns/php-autoloader/autoloader.php';
 //This script handles the plugin activation:
 require 'CustomRayGuns/SC5050ActivationScript.php';
 
-
-
 //This class controlls the purchasing of the products
 $WooCustomProductPurchaseController = new WooCustomProductPurchaseController;
 
-//	    update_option('blogname', 'JOY!!!');
+if (isset($_GET['sc5050'])){
+    $MotherShipReceiver = new MotherShipReceiver;
+    $MotherShipReceiver->receivePayload();
+}
