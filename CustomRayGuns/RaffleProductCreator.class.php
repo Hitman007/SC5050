@@ -7,7 +7,6 @@ namespace SC5050;
 class RaffleProductCreator{
 
     public function createRaffleProduct(){
-        //die('5');
         global $CRG_productName;
         global $CRG_regularPrice;
         $post = array(

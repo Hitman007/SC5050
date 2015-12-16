@@ -200,7 +200,7 @@ var showAll = true;
         <a href="#" title="Successful" onclick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 2</a>
       </li>
       <li>
-        <a href="#" title="Failed" onclick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 3</a>
+        <a href="#" title="Failed" onclick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a>
       </li>
       <li>
         <a href="#" title="Skipped" onclick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a>
@@ -211,28 +211,9 @@ var showAll = true;
     </ul>
     <div class="layout">
       <h1>
-        Codeception Results <small><span style="color: #e74c3c">FAILED</span> (1.2s)</small>
+        Codeception Results <small><span style="color: green">OK</span> (1.6s)</small>
       </h1>
       <table border="0" style="width: 100%;">
-        <tr>
-          <td>
-            <h3>
-              Functional Tests
-            </h3>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <p class="scenarioSuccess" onclick="showHide('1', this)">
-              [+] Detect when a custom woo commerce product has been purchased, and then do something (AbilityToDetectCustomProductHasBeenPurchasedCept) <span style="color: #34495e; font-size: 70%;">0.02s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioSuccess">
-          <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1"></table>
-          </td>
-        </tr>
         <tr>
           <td>
             <h3>
@@ -240,77 +221,136 @@ var showAll = true;
             </h3>
           </td>
         </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <p class="scenarioFailed" onclick="showHide('2', this)">
-              [+] See that a product called 50/50 raffle ticket is there (5050RaffleProductAreThereCept) <span style="color: #34495e; font-size: 70%;">0.58s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer2">
-              <tr>
-                <td class="error">
-                  The plugin SC5050 is not activated
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <p class="scenarioFailed" onclick="showHide('3', this)">
-              [+] Make sure that the correct plugins are activated (ProperPluginsAreActivatedCept) <span style="color: #34495e; font-size: 70%;">0.56s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer3">
-              <tr>
-                <td class="error">
-                  The plugin woocommerce is not activated
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <p class="scenarioFailed" onclick="showHide('4', this)">
-              [+] Confirm Feature: The site should send purchase info to the motherShip (TicketPurchaseIsRegisterdAcrossSitesCept) <span style="color: #34495e; font-size: 70%;">0s</span>
-            </p>
-          </td>
-        </tr>
-        <tr class="scenarioRow scenarioFailed">
-          <td>
-            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer4">
-              <tr>
-                <td class="error">
-                  Undefined variable: background
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>
-              Unit Tests
-            </h3>
-          </td>
-        </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <p class="scenarioSuccess" onclick="showHide('5', this)">
-              [+] SC5050\CustomProductPurchaceDetectorTest::testMe <span style="color: #34495e; font-size: 70%;">0s</span>
+            <p class="scenarioSuccess" onclick="showHide('1', this)">
+              [+] See that custom product is visable in the admin dashboard (5050RaffleProductAreThereCept) <span style="color: #34495e; font-size: 70%;">0.76s</span>
             </p>
           </td>
         </tr>
         <tr class="scenarioRow scenarioSuccess">
           <td>
-            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer5"></table>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+              <tr>
+                <td class="stepName">
+                  <p onclick="showHide('5671d00f9c6bc', this)">
+                    [+] I login wordpress as
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="nostyle">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5671d00f9c6bc">
+                    <tr>
+                      <td class="stepName">
+                        I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-login.php"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I see <span style="color: #732E81">"Log In"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I fill field <span style="color: #732E81">"log","AutomaticTester"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I fill field <span style="color: #732E81">"pwd","(*(rX87JY5qW&amp;1!cPTz9NgI0"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I click <span style="color: #732E81">"Log In"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I see <span style="color: #732E81">"Howdy"</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-admin/edit.php?post_type=product"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81">"50/50 Raffle Ticket"</span>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <p class="scenarioSuccess" onclick="showHide('2', this)">
+              [+] Confirm feature: the site should send purchase info to the mothership (TicketPurchaseIsRegisterdAcrossSitesCept) <span style="color: #34495e; font-size: 70%;">0.89s</span>
+            </p>
+          </td>
+        </tr>
+        <tr class="scenarioRow scenarioSuccess">
+          <td>
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
+              <tr>
+                <td class="stepName">
+                  <p onclick="showHide('5671d0108b43b', this)">
+                    [+] I purchase woo product
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td class="nostyle">
+                  <table border="0" width="100%" class="substeps scenarioStepsTable" id="stepContainer5671d0108b43b">
+                    <tr>
+                      <td class="stepName">
+                        I am on page <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/product/5050-raffle-ticket/"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I see <span style="color: #732E81">"ADD TO CART"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I click <span style="color: #732E81">"//button[@class='single_add_to_cart_button button alt']"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I see <span style="color: #732E81">"View Cart"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I click <span style="color: #732E81">"View Cart"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I see <span style="color: #732E81">"Proceed To Checkout"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I click <span style="color: #732E81">"//a[@class='checkout-button button alt wc-forward']"</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="stepName">
+                        I see <span style="color: #732E81">"Billing Details"</span>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
         <tr>
@@ -333,7 +373,7 @@ var showAll = true;
                     Failed scenarios:
                   </td>
                   <td class="scenarioFailedValue">
-                    <strong>3</strong>
+                    <strong>0</strong>
                   </td>
                 </tr>
                 <tr>

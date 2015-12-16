@@ -7,6 +7,7 @@ class WordpressTester extends \AcceptanceTester implements WordpressTesterInterf
 	use AbilityToSeePluginIsActivated_pluginName;
 	use AbilityToLoginWordpressAs_role;
 	use AbilityToResetTheDatabase;
+	use AbilitToPurchaseWooProduct;
 
 }
 
@@ -15,4 +16,5 @@ interface WordpressTesterInterface{
     public function seePluginIsActivated($pluginName);
     public function loginWordpressAs($role);
     public function resetTheDatabase($SQL_DumpFile);
+    public function purchaseWooProduct($productURL);
 }

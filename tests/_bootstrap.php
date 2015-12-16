@@ -15,15 +15,16 @@ global $CRG_adminRoleUserPassword;
 $CRG_adminRoleUserPassword = "(*(rX87JY5qW&1!cPTz9NgI0";
 
 //used in abilityToResetTheDatabase.trait.php:
-global $CRG_DBuserName;
-global $CRG_DBname;
-global $CRG_DBsetupPath;
-$CRG_DBuserName = "hitman007";
-$CRG_DBname = "c9";
-$CRGDBsetupPath = "~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_NoPluginsOrData.sql";
+global $CRG_DBuserName; $CRG_DBuserName = "hitman007";
+global $CRG_DBname; $CRG_DBname = "c9";
+global $CRG_DBsetupPath; $CRGDBsetupPath = "~/workspace/wp-content/plugins/SC5050/tests/_data/CRG_NoPluginsOrData.sql";
 
 //Plugin under test:
-global $CRG_pLuginUnderTestVerboseName;
-global $CRG_pluginUnderTestSlugName;
-$CRG_pLuginUnderTestVerboseName = "South Carolina 50/50";
-$CRG_pluginUnderTestSlugName = "SC5050";
+global $CRG_pLuginUnderTestVerboseName; $CRG_pLuginUnderTestVerboseName = "South Carolina 50/50";
+global $CRG_pluginUnderTestSlugName; $CRG_pluginUnderTestSlugName = "SC5050";
+
+//SC5050
+global $productTextName;
+$productTextName = "50/50 Raffle Ticket";
+global $productPermalink;
+$productPermalink = "product/5050-raffle-ticket/";

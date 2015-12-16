@@ -6,7 +6,7 @@ Feature: The site should send purchase info to the motherShip
     Info is sent with every purchace to the motherShip
 */
 
-$I = /*am a */ new SC5050\SC5050Tester($background);
+$I = /*am a */ new SC5050\SC5050Tester($scenario);
 $I->wantTo("Confirm Feature: The site should send purchase info to the motherShip");
 
 /*
@@ -15,5 +15,6 @@ Scenario:
     Then the information is sent to $motherShip sendInfoToMotherShip();
 */
 
-$I->purchaceATicket();
-$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
+global $productPermalink; global $CRG_homePageURL; $productPage = $CRG_homePageURL . $productPermalink;
+$I->purchaseWooProduct($productPage);
+//$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
