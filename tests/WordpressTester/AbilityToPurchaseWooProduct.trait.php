@@ -6,7 +6,8 @@ trait AbilitToPurchaseWooProduct{
 
 	public function purchaseWooProduct($productURL){
 		$I=$this;
-		$I->amOnPage($productURL);
+		$I->wantTo("Confirm that Woo product can be purchased.");
+		$I->amOnUrl($productURL);
 		$I->see('ADD TO CART');
 		
 		//This class was identified by viewing the Add Cart button with Firefox:
@@ -18,22 +19,41 @@ trait AbilitToPurchaseWooProduct{
 		//This class was identified by viewing with Firefox:
 		$I->click("//a[@class='checkout-button button alt wc-forward']");
 		$I->see('Billing Details');
-		$I->selectOption('form select[name=account]', 'Premium');
-		$I->submitForm(
-			'.woocommerce-checkout', 
-				[
-				'billing_first_name' => 'DeleteFirstName',
-				'billing_last_name' => 'DeleteLastName',
-				'billing_phone' => '(555)555-1212',
-				'billing_email' => 'delete@delme.com',
-				'billing_address_1' => '123 Mulberry Lane',
-				'billing_address_2_field' => 'Apt 2-b',
-				'billing_city' => 'Anytown',
-				'billing_state_field' => 'Nevada',
-				'billing_postcode' => '12345'
-				],
-			'woocommerce_checkout_place_order'
-		);
+		$I->fillField('billing_first_name','DeleteFirstName');
+		$I->fillField('billing_last_name', 'DeleteLastName');
+		$I->fillField('billing_phone', '(555)555-1212');
+		$I->fillField('billing_email', 'delete@delme.com');
+		$I->fillField('billing_address_1', '123 Mulberry Lane');
+		$I->fillField('billing_address_2', 'Apt 2-b');
+		$I->fillField('billing_city', 'Anytown');
+		$I->fillField('billing_postcode', '12345');
+		$I->click('#s2id_billing_state');
+		$I->pressKey('.page', 'N');
+		$I->pressKey('.page','e');
+		$I->pressKey('.page','v');
+		$I->pressKey('.page','a');
+		$I->pressKey('.page','d');
+		$I->pressKey('.page','a');
+		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		$I->click('.entry-title');
+		$I->click('#s2id_billing_country');
+		$I->pressKey('.page','U');
+		$I->pressKey('.page','n');
+		$I->pressKey('.page','i');
+		$I->pressKey('.page','t');
+		$I->pressKey('.page','e');
+		$I->pressKey('.page','d');
+		$I->pressKey('.page',' ');
+		$I->pressKey('.page','S');
+		$I->pressKey('.page','t');
+		$I->pressKey('.page','a');
+		$I->pressKey('.page','t');
+		$I->pressKey('.page','e');
+		$I->pressKey('.page','s');
+		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		$I->wait(15);
+		$I->click('#place_order');
+		$I->wait(15);
+		$I->see('Thank You');
 	}
-	
 }

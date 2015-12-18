@@ -21,5 +21,5 @@ Scenario: The custom product is visable in the admin dashboard
 
 $I->wantTo("See that custom product is visable in the admin dashboard");
 $I->loginWordpressAs/*an*/('admin');
-$I->amOnPage($productsPageURL);
+$I->amOnUrl($productsPageURL);
 $I->/*should*/see($productTextName);

@@ -7,12 +7,12 @@ trait AbilityToLoginWordpressAs_role{
 	public function loginWordpressAs($role) {
 		$I = $this;
 		global $CRG_loginPageURL; //This variable is set in the tests/_bootstrap.php file
-		$I->amOnPage($CRG_loginPageURL);
-		$I->see('Log In');
+		$I->amOnUrl($CRG_loginPageURL);
+		$I->see('Lost your password?');
 		switch ($role) {
 			case "admin":
 				global $CRG_adminRoleUserName; //This variable is set in the tests/_bootstrap.php file
-				$I->fillField('log', $CRG_adminRoleUserName);
+				$I->fillField('#user_login', $CRG_adminRoleUserName);
 				global $CRG_adminRoleUserPassword; //This variable is set in the tests/_bootstrap.php file
 				$I->fillField('pwd', $CRG_adminRoleUserPassword);
 				$I->click('Log In');
