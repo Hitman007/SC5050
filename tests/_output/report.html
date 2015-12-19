@@ -194,13 +194,13 @@
  <body>
    <ul id="toolbar-filter">
      <li> <a href="#" title="Show all" onClick="showAllScenarios()">◯</a></li>
-     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 2</a></li>
-     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 0</a></li>
+     <li> <a href="#" title="Successful" onClick="toggleScenarios('scenarioSuccess', this.parentElement)"><strong>✔</strong> 0</a></li>
+     <li> <a href="#" title="Failed" onClick="toggleScenarios('scenarioFailed', this.parentElement)"><strong>✗</strong> 1</a></li>
      <li> <a href="#" title="Skipped" onClick="toggleScenarios('scenarioSkipped', this.parentElement)"><strong>S</strong> 0</a></li>
      <li> <a href="#" title="Incomplete" onClick="toggleScenarios('scenarioIncomplete', this.parentElement)"><strong>I</strong> 0</a></li>
    </ul>
  <div class="layout">
- <h1>Codeception Results <small><span style="color: green">OK</span> (181.6s)</small></h1>
+ <h1>Codeception Results <small><span style="color: #e74c3c">FAILED</span> (22.3s)</small></h1>
 
 
 
@@ -209,14 +209,14 @@
  <td>
      <h3>Acceptance Tests</h3>
  </td>
-</tr>   <tr class="scenarioRow scenarioSuccess">
+</tr>   <tr class="scenarioRow scenarioFailed">
     <td>
-     <p class="scenarioSuccess" onclick="showHide('1', this)">[+] See that custom product is visable in the admin dashboard (5050RaffleProductAreThereCept) <span style="color: #34495e; font-size: 70%;">30.57s</span></p>
+     <p class="scenarioFailed" onclick="showHide('1', this)">[+] Confirm feature: the plugin can setup a 50/50 raffle (CreateRaffleCept) <span style="color: #34495e; font-size: 70%;">22.28s</span></p>
     </td>
    </tr>
-   <tr class="scenarioRow scenarioSuccess">
+   <tr class="scenarioRow scenarioFailed">
     <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
+     <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
 
 
       <tr>
@@ -244,209 +244,62 @@
       </tr>
 
       <tr>
-       <td class="stepName ">I am on url <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-admin/edit.php?post_type=product"</span></td>
+       <td class="stepName ">I am on url <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/wp-admin/index.php"</span></td>
       </tr>
 
       <tr>
-       <td class="stepName ">I see <span style="color: #732E81">"50/50 Raffle Ticket"</span></td>
+       <td class="stepName failedStep">I see <span style="color: #732E81">"50/50 Raffles"</span></td>
       </tr>
 
 
-         
-
-     </table>
+         <tr >
+    <td class="error">
+        Failed asserting that   <bold>/wp-admin/index.php</bold><br />
+--> <info>Dashboard<br />
+Home<br />
+Updates<br />
+3<br />
+<br />
+Posts<br />
+<br />
+Media<br />
+<br />
+Pages<br />
+<br />
+Comments<br />
+<br />
+WooCommerce<br />
+<br />
+Products<br />
+<br />
+Appearance<br />
+<br />
+Plugins<br />
+<br />
+Users<br />
+<br />
+Tools<br />
+<br />
+Settings<br />
+Collapse menu<br />
+Array<br />
+3<br />
+0<br />
+New<br />
+Howdy, Test McTester<br />
+Help<br />
+Screen Options<br />
+Dashboard<br />
+Toggle panel: At a Glance<br />
+At a Glance<br />
+1 Post<br />
+6 Pages<br />
+1 Comment<br />
+WordPress 4.4 running Twenty Fifte</info><br />
+<debug>[Content too long to display. See complete response in '_output' directory]</debug><br />
+--> contains "50/50 raffles".
     </td>
-   </tr>
-
-
-   <tr class="scenarioRow scenarioSuccess">
-    <td>
-     <p class="scenarioSuccess" onclick="showHide('2', this)">[+] Confirm purchase info has been received by the mothership. (TicketPurchaseIsRegisterdAcrossSitesCept) <span style="color: #34495e; font-size: 70%;">151.02s</span></p>
-    </td>
-   </tr>
-   <tr class="scenarioRow scenarioSuccess">
-    <td>
-     <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer2">
-
-
-      <tr>
-       <td class="stepName ">I am on url <span style="color: #732E81">"https://crg-remote-hitman007.c9users.io/product/5050-raffle-ticket/"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I see <span style="color: #732E81">"ADD TO CART"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">"//button[@class='single_add_to_cart_button button alt']"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I see <span style="color: #732E81">"View Cart"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">"View Cart"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I see <span style="color: #732E81">"Proceed To Checkout"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">"//a[@class='checkout-button button alt wc-forward']"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I see <span style="color: #732E81">"Billing Details"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_first_name","DeleteFirstName"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_last_name","DeleteLastName"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_phone","(555)555-1212"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_email","delete@delme.com"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_address_1","123 Mulberry Lane"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_address_2","Apt 2-b"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_city","Anytown"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I fill field <span style="color: #732E81">"billing_postcode","12345"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">"#s2id_billing_state"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","N"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","e"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","v"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","a"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","d"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","a"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page",""</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">".entry-title"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">"#s2id_billing_country"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","U"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","n"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","i"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","t"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","e"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","d"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page"," "</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","S"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","t"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","a"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","t"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","e"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page","s"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I press key <span style="color: #732E81">".page",""</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I wait <span style="color: #732E81">15</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I click <span style="color: #732E81">"#place_order"</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I wait <span style="color: #732E81">15</span></td>
-      </tr>
-
-      <tr>
-       <td class="stepName ">I see <span style="color: #732E81">"Thank You"</span></td>
-      </tr>
-
-
-         
+</tr>
 
      </table>
     </td>
@@ -461,11 +314,11 @@
       <table border="0">
        <tr>
         <td width="250" class="scenarioSuccess">Successful scenarios:</td>
-        <td class="scenarioSuccessValue"><strong>2</strong></td>
+        <td class="scenarioSuccessValue"><strong>0</strong></td>
        </tr>
        <tr>
         <td class="scenarioFailed">Failed scenarios:</td>
-        <td class="scenarioFailedValue"><strong>0</strong></td>
+        <td class="scenarioFailedValue"><strong>1</strong></td>
        </tr>
        <tr>
         <td class="scenarioSkipped">Skipped scenarios:</td>

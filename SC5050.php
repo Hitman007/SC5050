@@ -2,7 +2,7 @@
 /*
 Plugin Name: South Carolina 50/50
 Plugin URI: http://customrayguns.com/
-Description: 
+Description: THIS IS A DESCRIPTOPN
 Version: 3.0
 Author: Jim Maguire
 Author URI: http://customrayguns.com/
@@ -24,4 +24,9 @@ $WooCustomProductPurchaseController = new WooCustomProductPurchaseController;
 if (isset($_GET['sc5050'])){
     $MotherShipReceiver = new MotherShipReceiver;
     $MotherShipReceiver->receivePayload();
+}
+
+add_action( 'admin_menu', 'SC5050\launchAdminView' );
+function launchAdminView(){
+	$AdminPageView = new AdminPageView;
 }

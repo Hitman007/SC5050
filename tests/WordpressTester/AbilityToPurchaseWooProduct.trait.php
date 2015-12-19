@@ -4,6 +4,7 @@ namespace CustomRayGuns;
 
 trait AbilitToPurchaseWooProduct{
 
+	//This method purchases a Woo commerce product:
 	public function purchaseWooProduct($productURL){
 		$I=$this;
 		$I->wantTo("Confirm that Woo product can be purchased.");
@@ -51,8 +52,10 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('.page','e');
 		$I->pressKey('.page','s');
 		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		//Set on Cloud9 VERY SLOW. Change this if everything is working to a lower number than 15:
 		$I->wait(15);
 		$I->click('#place_order');
+		//Set on Cloud9 VERY SLOW. Change this if everything is working to a lower number than 15:
 		$I->wait(15);
 		$I->see('Thank You');
 	}
