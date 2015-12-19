@@ -19,3 +19,11 @@ global $CRG_homePageURL;
 $dashBoardURL = $CRG_homePageURL . "wp-admin/index.php";
 $I->amOnUrl($dashBoardURL);
 $I->see('50/50 Raffles');
+
+/*
+ Sceanrio:
+    When an admin clicks the menu item
+    Then he sees the admin page
+*/
+$I->click(".toplevel_page_raffle_page");
+$I->see('Create New Charitable Raffle');
