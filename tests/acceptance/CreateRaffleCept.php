@@ -1,6 +1,6 @@
 <?php
 /*
-Feature: Admins can create, edit, and delete raffle CPTs
+Feature: Admins can create, edit, and delete raffles
     In order have raffle tickets to sell
     As as admin
     I want to do CRUD activities in the dashbaord
