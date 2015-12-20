@@ -5,7 +5,7 @@ $I = /*am a */ new CustomRayGuns\WordpressTester($scenario);
 global $CRG_homePageURL; //This variable is set in the tests/_bootstrap.php file
 global $CRG_pLuginUnderTestVerboseName; //This variable is set in the tests/_bootstrap.php file
 global $CRG_pluginUnderTestSlugName; //This variable is set in the tests/_bootstrap.php file
-$productsPageURL = $CRG_homePageURL . "wp-admin/edit.php?post_type=product"; //Default Woocommerce product page
+global $productsPageURL; //This variable is set in the tests/_bootstrap.php file
 global $productTextName; //This variable is set in the tests/_bootstrap.php file
 /*
 Feature: custom products have been added to Woocommerce.
