@@ -33,7 +33,7 @@ trait AbilitToPurchaseWooProduct{
 		//$I->click('#select2-results-2');
 		//$I->click('.entry-title');
 		$I->click('#s2id_billing_country');
-		$I->wait(5);
+		$I->wait('5');
 		$I->pressKey('.page','U');
 		$I->pressKey('.page','n');
 		$I->pressKey('.page','i');
@@ -55,7 +55,7 @@ trait AbilitToPurchaseWooProduct{
 	
 		$I->click('#s2id_billing_state');
 		$I->click('#s2id_billing_state');
-		$I->wait(5);
+		$I->wait('5');
 		$I->pressKey('#s2id_autogen2_search', 'N');
 		$I->pressKey('#s2id_autogen2_search','e');
 		$I->pressKey('#s2id_autogen2_search','v');
@@ -63,12 +63,12 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('#s2id_autogen2_search','d');
 		$I->pressKey('#s2id_autogen2_search','a');
 		$I->pressKey('.#s2id_autogen2_search', \WebDriverKeys::ENTER);
-		$I->wait(5);
+		$I->wait('5');
 		
 		$I->fillField('billing_city', 'Anytown');
 		
 		$I->click('#place_order');
-		$I->wait(25);
+		$I->wait('25');
 		$I->see('Thank You');
 	}
 }
