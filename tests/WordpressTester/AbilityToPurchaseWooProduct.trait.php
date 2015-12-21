@@ -30,18 +30,19 @@ trait AbilitToPurchaseWooProduct{
 		$I->fillField('billing_postcode', '12345');
 		$I->click('#s2id_billing_state');
 		$I->click('#s2id_billing_state');
+		$I->wait(5);
 		$I->pressKey('.page', 'N');
 		$I->pressKey('.page','e');
 		$I->pressKey('.page','v');
 		$I->pressKey('.page','a');
 		$I->pressKey('.page','d');
 		$I->pressKey('.page','a');
-		//$I->pressKey('.page', \WebDriverKeys::ENTER);
-		$I->pressKey('.page', '13');
+		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		//$I->pressKey('.page', '13');
 		//$I->click('#select2-results-2');
 		//$I->click('.entry-title');
 		$I->click('#s2id_billing_country');
-		$I->click('#s2id_billing_country');
+		$I->wait(5);
 		$I->pressKey('.page','U');
 		$I->pressKey('.page','n');
 		$I->pressKey('.page','i');
@@ -55,13 +56,9 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('.page','t');
 		$I->pressKey('.page','e');
 		$I->pressKey('.page','s');
-		$I->pressKey('.page', '13');
-		//$I->pressKey('.page', \WebDriverKeys::ENTER);
-		//Set on Cloud9 VERY SLOW. Change this if everything is working to a lower number than 15:
-		$I->wait(15);
+		//$I->pressKey('.page', '13');
+		$I->pressKey('.page', \WebDriverKeys::ENTER);
 		$I->click('#place_order');
-		//Set on Cloud9 VERY SLOW. Change this if everything is working to a lower number than 15:
-		$I->wait(15);
 		$I->see('Thank You');
 	}
 }
