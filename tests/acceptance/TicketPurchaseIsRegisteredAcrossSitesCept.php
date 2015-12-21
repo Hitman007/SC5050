@@ -17,4 +17,4 @@ Scenario:
 
 global $productPermalink; global $CRG_homePageURL; $productPage = $CRG_homePageURL . $productPermalink;
 $I->purchaseWooProduct($productPage);
-$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
+//$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
