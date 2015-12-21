@@ -15,8 +15,9 @@ Scenario:
     Then the information is sent to $motherShip sendInfoToMotherShip();
 */
 global $productPermalink; global $CRG_homePageURL; $productPage = $CRG_homePageURL . $productPermalink;
-$I->purchaseWooProduct($productPage);
-//$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
+$I->purchaseRaffleTicket($productPage);
+//$I->purchaseWooProduct($productPage);
+$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
 
 /*Scenario:
     When a user has purchased a ticket
