@@ -35,7 +35,8 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('.page','a');
 		$I->pressKey('.page','d');
 		$I->pressKey('.page','a');
-		//$I->pressKey('.page', \WebDriverKeys::ENTER);
+		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		$I->pressKey('.page', '13');
 		$I->click('#select2-results-2');
 		$I->click('.entry-title');
 		$I->click('#s2id_billing_country');
