@@ -1,7 +1,7 @@
 <?php
 
 /*
-Feature: The site sends data with every purchace to the motherShip
+Story: The site sends data with every purchace to the motherShip
     In order to keep track of purchase information
     As the system
     I should send data with every purchace to the motherShip
