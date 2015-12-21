@@ -68,7 +68,7 @@ trait AbilitToPurchaseWooProduct{
 		$I->fillField('billing_city', 'Anytown');
 		
 		$I->click('#place_order');
-		//$I->wait('25');
+		$I->wait('25');
 		$I->see('Thank you.');
 		//$I->wait('25');
 	}
