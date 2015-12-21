@@ -3,6 +3,6 @@
 namespace SC5050;
 
 class SC5050Tester extends \CustomRayGuns\WordpressTester{
-    use AbilityToPurchaceTicket;
+    use AbilityToPurchaceRaffleTicket;
     use AbilityToConfirmPurchaseInfoHasBeenReceivedOnTheMotherShip;
 }
