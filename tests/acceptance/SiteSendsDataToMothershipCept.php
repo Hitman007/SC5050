@@ -16,10 +16,12 @@ Scenario:
 */
 global $productPermalink; global $CRG_homePageURL; $productPage = $CRG_homePageURL . $productPermalink;
 $I->purchaseRaffleTicket($productPage);
-//$I->purchaseWooProduct($productPage);
 $I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
 
-/*Scenario:
+/*
+Scenario:
     When a user has purchased a ticket
     Then they receive an email with the ticket info
 */
+$I->confirmEmailHasBeenReceived();
+
