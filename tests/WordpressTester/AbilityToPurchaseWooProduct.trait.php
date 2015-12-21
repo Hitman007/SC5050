@@ -69,7 +69,7 @@ trait AbilitToPurchaseWooProduct{
 		
 		$I->click('#place_order');
 		$I->wait('25');
-		$I->see('Thank You');
+		$I->see('Thank you.');
 		$I->wait('25');
 	}
 }
