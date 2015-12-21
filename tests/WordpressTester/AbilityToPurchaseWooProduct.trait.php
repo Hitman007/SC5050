@@ -56,13 +56,13 @@ trait AbilitToPurchaseWooProduct{
 		$I->click('#s2id_billing_state');
 		$I->click('#s2id_billing_state');
 		$I->wait(5);
-		$I->pressKey('.page', 'N');
-		$I->pressKey('.page','e');
-		$I->pressKey('.page','v');
-		$I->pressKey('.page','a');
-		$I->pressKey('.page','d');
-		$I->pressKey('.page','a');
-		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		$I->pressKey('#s2id_autogen2_search', 'N');
+		$I->pressKey('#s2id_autogen2_search','e');
+		$I->pressKey('#s2id_autogen2_search','v');
+		$I->pressKey('#s2id_autogen2_search','a');
+		$I->pressKey('#s2id_autogen2_search','d');
+		$I->pressKey('#s2id_autogen2_search','a');
+		$I->pressKey('.#s2id_autogen2_search', \WebDriverKeys::ENTER);
 		$I->wait(5);
 		
 		$I->fillField('billing_city', 'Anytown');
