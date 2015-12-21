@@ -59,6 +59,7 @@ trait AbilitToPurchaseWooProduct{
 		//$I->pressKey('.page', '13');
 		$I->pressKey('.page', \WebDriverKeys::ENTER);
 		$I->click('#place_order');
+		$I->wait(25);
 		$I->see('Thank You');
 	}
 }
