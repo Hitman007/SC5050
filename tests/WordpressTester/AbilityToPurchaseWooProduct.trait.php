@@ -35,7 +35,7 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('.page','a');
 		$I->pressKey('.page','d');
 		$I->pressKey('.page','a');
-		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		//$I->pressKey('.page', \WebDriverKeys::ENTER);
 		$I->click('.entry-title');
 		$I->click('#s2id_billing_country');
 		$I->pressKey('.page','U');
@@ -51,7 +51,7 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('.page','t');
 		$I->pressKey('.page','e');
 		$I->pressKey('.page','s');
-		$I->pressKey('.page', \WebDriverKeys::ENTER);
+		//$I->pressKey('.page', \WebDriverKeys::ENTER);
 		//Set on Cloud9 VERY SLOW. Change this if everything is working to a lower number than 15:
 		$I->wait(15);
 		$I->click('#place_order');
