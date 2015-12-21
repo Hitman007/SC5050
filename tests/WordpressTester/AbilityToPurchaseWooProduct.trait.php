@@ -29,6 +29,7 @@ trait AbilitToPurchaseWooProduct{
 		$I->fillField('billing_city', 'Anytown');
 		$I->fillField('billing_postcode', '12345');
 		$I->click('#s2id_billing_state');
+		$I->click('#s2id_billing_state');
 		$I->pressKey('.page', 'N');
 		$I->pressKey('.page','e');
 		$I->pressKey('.page','v');
@@ -39,6 +40,7 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('.page', '13');
 		//$I->click('#select2-results-2');
 		//$I->click('.entry-title');
+		$I->click('#s2id_billing_country');
 		$I->click('#s2id_billing_country');
 		$I->pressKey('.page','U');
 		$I->pressKey('.page','n');
