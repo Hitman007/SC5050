@@ -10,7 +10,7 @@ trait AbilityToConfirmWoocommerceDefaultPagesExist{
 		global $CRG_homePageURL; //This variable is set in the tests/_bootstrap.php file
 		$checkoutPageURL = $CRG_homePageURL . "checkout/";
 		$I->amOnUrl($checkoutPageURL);
-		$I->dontSee('Not Found');
+		$I->dontSee('Not Fadsfasdfound');
     }
     
 }
