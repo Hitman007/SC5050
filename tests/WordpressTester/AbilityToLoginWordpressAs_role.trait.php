@@ -6,6 +6,7 @@ trait AbilityToLoginWordpressAs_role{
 
 	public function loginWordpressAs($role) {
 		$I = $this;
+		$I->wantTo('Login Wordpress');
 		global $CRG_loginPageURL; //This variable is set in the tests/_bootstrap.php file
 		$I->amOnUrl($CRG_loginPageURL);
 		$I->see('Lost your password?');
