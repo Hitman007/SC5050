@@ -5,7 +5,7 @@ require(dirname(__FILE__)."/../CustomRayGuns/php-autoloader/autoloader.php");
 global $CRG_homePageURL;
 //$CRG_homePageURL = 'https://crg-remote-hitman007.c9users.io/';
 //$CRG_homePageURL = 'http://ec2-52-90-107-126.compute-1.amazonaws.com/';
-$CRG_homePageURL = 'http://ec2-52-90-107-126.compute-1.amazonaws.com/';
+$CRG_homePageURL = 'http://ec2-54-152-240-144.compute-1.amazonaws.com';
 
 
 global $CRG_loginPageURL;
@@ -30,4 +30,4 @@ global $productTextName; $productTextName = "50/50 Raffle Ticket";
 global $productPermalink; $productPermalink = "index.php/product/5050-raffle-ticket/";
 
 //Woocommerce
-global $productsPageURL; $productsPageURL = "http://ec2-52-90-107-126.compute-1.amazonaws.com/wp-admin/edit.php?post_type=product";
+global $productsPageURL; $productsPageURL = "http://ec2-54-152-240-144.compute-1.amazonaws.com/wp-admin/edit.php?post_type=product";
