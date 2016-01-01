@@ -18,7 +18,7 @@ Scenario:
 $I->loginWordpressAs('admin');
 
 //Compile the dashboard's URL. Set in _bootstrap.php:
-	global $CRG_homePageURL; $dashBoardURL = $CRG_homePageURL . "wp-admin/index.php";
+	global $CRG_homePageURL; $dashBoardURL = $CRG_homePageURL . "/wp-admin/index.php";
 	$I->amOnUrl($dashBoardURL);
 $I->see('Raffles');
 
