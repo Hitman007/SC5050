@@ -6,8 +6,8 @@ class CRG_WP_LoginController extends \AcceptanceTester
 
     public function loginAsAdmin()
     {
-        $I->wantTo('generate invitation code and sign up using it');
         $I = $this;
+        $I->wantTo('generate invitation code and sign up using it');
     	$I->amOnUrl('http://google.com');
     }
 
