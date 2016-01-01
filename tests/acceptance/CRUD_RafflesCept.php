@@ -23,8 +23,9 @@ Scenario:
 	$I->amOnUrl($dashBoardURL);
 //$I->see('Raffles');
 
-$x = new AcceptanceTester($scenario);
-$x->wantTo("Csssssssssssssssssssssssss raffles");
+$I = /*am a */ new SC5050\SC5050Tester($scenario);
+$I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
+	$I->amOnUrl($dashBoardURL);
 /*
  Sceanrio:
     When an admin clicks the menu item
