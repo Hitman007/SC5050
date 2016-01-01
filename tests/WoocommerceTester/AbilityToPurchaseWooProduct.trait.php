@@ -49,7 +49,7 @@ trait AbilitToPurchaseWooProduct{
 		$I->pressKey('#s2id_autogen2_search', \WebDriverKeys::ENTER);
 		$I->fillField('billing_city', 'Anytown');
 		$I->click('#place_order');
-		$I->wait('25');
+		$I->wait('8');
 		$I->see('Thank you.');
 	}
 }
