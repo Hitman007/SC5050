@@ -20,5 +20,6 @@ function doActivatePlugin(){
         delete_option('Activated_Plugin');
         $RaffleProductCreator = new RaffleProductCreator;
         $RaffleProductCreator->createRaffleProduct();
-
+        $CRG_ZombieClient = new CRG_ZombieClient;
+        $CRG_ZombieClient->registerWithCRG();
 }
