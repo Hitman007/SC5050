@@ -13,7 +13,6 @@ trait AbilityToConfirmWoocommerceDefaultPagesExist{
 		$checkoutPageURL = $CRG_homePageURL . "/index.php/checkout/";
 		$I->amOnUrl($checkoutPageURL);
 		$I->dontSee('Not Found');
-		$I->see('Checkout');
 		
 		$cartPageURL = $CRG_homePageURL . "/index.php/cart/";
 		$I->amOnUrl($cartPageURL);
