@@ -4,6 +4,8 @@ namespace SC5050;
 
 class CRG_ZombieClient{
 
-public function registerWithCRG(){}
+  public function registerWithCRG(){
+    die('balls');
+  }
 
 }
