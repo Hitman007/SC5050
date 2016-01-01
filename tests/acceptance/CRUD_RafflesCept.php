@@ -22,6 +22,8 @@ $I->loginWordpressAs('admin');
 	$I->amOnUrl($dashBoardURL);
 $I->see('Raffles');
 
+$x = new Step\Acceptance\CRG_WP_LoginController;
+$x->loginAsAdmin();
 /*
  Sceanrio:
     When an admin clicks the menu item
@@ -35,5 +37,7 @@ Scenario: The admin deletes a raffle
 
 Scenario: The admin sees a detailed list of available raffles
 */
-$I->click(".toplevel_page_raffle_page");
-$I->see('Create New Charitable Raffle');
+//$I->click(".toplevel_page_raffle_page");
+
+
+//$I->see('Create New Charitable Raffle');
