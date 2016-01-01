@@ -15,12 +15,12 @@ Scenario:
 	Then he should see a custom item called "Raffles"
 */
 
-$I->loginWordpressAs('admin');
+//$I->loginWordpressAs('admin');
 
 //Compile the dashboard's URL. Set in _bootstrap.php:
 	global $CRG_homePageURL; $dashBoardURL = $CRG_homePageURL . "/wp-admin/index.php";
 	$I->amOnUrl($dashBoardURL);
-$I->see('Raffles');
+//$I->see('Raffles');
 
 $x = new Step\Acceptance\CRG_WP_LoginController;
 $x->loginAsAdmin();
