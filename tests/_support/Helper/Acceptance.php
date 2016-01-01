@@ -9,7 +9,7 @@ class Acceptance extends \Codeception\Module
     public function loginAsAdmin()
     {
         $I = $this;
-        $I->wantTo('ssssssssssssssss');
+        //$I->wantTo('ssssssssssssssss');
         //$I->addStep('vvvvvvvvvvvvvvv');
     	$I->amOnUrl('http://google.com');
     }
