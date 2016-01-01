@@ -23,8 +23,8 @@ Scenario:
 	$I->amOnUrl($dashBoardURL);
 //$I->see('Raffles');
 
-$x = new Step\Acceptance\CRG_WP_LoginController($scenario);
-$x->loginAsAdmin();
+$x = new AcceptanceTester($scenario);
+$x->wantTo("Csssssssssssssssssssssssss raffles");
 /*
  Sceanrio:
     When an admin clicks the menu item
