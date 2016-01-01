@@ -22,7 +22,7 @@ Scenario:
 	$I->amOnUrl($dashBoardURL);
 //$I->see('Raffles');
 
-$x = new Step\Acceptance\CRG_WP_LoginController;
+$x = new Step\Acceptance\CRG_WP_LoginController($scenario);
 $x->loginAsAdmin();
 /*
  Sceanrio:
