@@ -6,7 +6,8 @@ Feature: Admins can create, edit, and delete raffles
     I want to do CRUD activities in the dashbaord
 */
 
-$I = /*am a */ new SC5050\SC5050Tester($scenario);
+//$I = /*am a */ new SC5050\SC5050Tester($scenario);
+$I = new AcceptanceTester($scenario);
 $I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
 
 /*
