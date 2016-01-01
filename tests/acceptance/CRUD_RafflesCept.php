@@ -27,6 +27,11 @@ Scenario:
 $I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
 	$I->amOnUrl($dashBoardURL);
 	$I->expect('the form is not submitted');
+	$nick = $I->haveFriend('nick');
+	$nick->does(function(AcceptanceTester $I) {
+    $I->amOnUrl('http://google.com');
+    $I->see('Hello all!', '.message');
+});
 /*
  Sceanrio:
     When an admin clicks the menu item
