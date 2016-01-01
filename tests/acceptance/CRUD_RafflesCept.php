@@ -7,8 +7,8 @@ Feature: Admins can create, edit, and delete raffles
 */
 
 //$I = /*am a */ new SC5050\SC5050Tester($scenario);
-$I = new AcceptanceTester($scenario);
-$I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
+//$I = new AcceptanceTester($scenario);
+//$I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
 
 /*
 Scenario:
@@ -26,6 +26,7 @@ Scenario:
 $I = /*am a */ new SC5050\SC5050Tester($scenario);
 $I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
 	$I->amOnUrl($dashBoardURL);
+	$I->expect('the form is not submitted');
 /*
  Sceanrio:
     When an admin clicks the menu item
