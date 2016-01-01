@@ -12,5 +12,4 @@ trait AbilityToConfirmWoocommerceDefaultPagesExist{
 		$I->amOnUrl($checkoutPageURL);
 		$I->dontSee('Not Found');
     }
-    
 }
