@@ -11,3 +11,4 @@ modules:
          url: 'https://crg-remote-hitman007.c9users.io/'
          browser: firefox
          window_size: maximum
+      - \Helper\Acceptance
