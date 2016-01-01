@@ -17,6 +17,6 @@ trait AbilityToConfirmWoocommerceDefaultPagesExist{
 		$cartPageURL = $CRG_homePageURL . "/index.php/cart/";
 		$I->amOnUrl($cartPageURL);
 		$I->dontSee('Not Found');
-		$I->see('UPDATE CART');
+		$I->see('Cart');
     }
 }
