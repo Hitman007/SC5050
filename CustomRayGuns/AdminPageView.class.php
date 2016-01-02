@@ -9,7 +9,13 @@ class AdminPageView{
 	}
 	
 	public function my_custom_menu_page(){
-		echo "Admin Page YIPEEEEEE!!!!!!!!!!!!";
+$output = "admin area";
+$output = $output . $this->mothershipAdminArea();
+		echo $output;
 	}
+
+public function mothershipAdmimArea(){
+return 'admin zone';
+}
 	
 }
