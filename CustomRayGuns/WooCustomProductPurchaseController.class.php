@@ -10,7 +10,7 @@ class WooCustomProductPurchaseController{
         add_action( 'woocommerce_thankyou', array($this, 'doSendProductInfoToMotherShip') );
     }
 
-    //This function is fired after the thank you event is detected.
+    //This function is fired after the thank you event is detected. As of now the only security is the get variable sc5050
 	public function doSendProductInfoToMotherShip(){
 	    $infoCompiler = new infoCompiler;
 	    $dataPackage = $infoCompiler->dataPackage;
