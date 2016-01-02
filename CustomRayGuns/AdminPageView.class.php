@@ -2,6 +2,7 @@
 
 namespace SC5050;
 
+//this class displays the content of the admin area
 class AdminPageView{
 	
 	public function __construct() {
@@ -9,9 +10,9 @@ class AdminPageView{
 	}
 	
 	public function echoSC5050adminPage(){
-$output = "admin area";
-$output = $output . $this->mothershipAdminArea();
-		echo $output;
+        $output = "admin area";
+        $output = $output . $this->mothershipAdminArea();
+	echo $output;
 	}
 
 public function mothershipAdmimArea(){
