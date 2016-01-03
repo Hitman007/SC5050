@@ -10,13 +10,13 @@ class AdminPageView{
 	}
 	
 	public function echoSC5050adminPage(){
-        $output = "admin area";
-        $output = $output . $this->mothershipAdminArea();
-	echo $output;
+        	$output = "admin area";
+        	$output = $output . $this->mothershipAdminArea();
+		echo $output;
 	}
 
-public function mothershipAdmimArea(){
-return 'admin zone';
-}
+	public function mothershipAdmimArea(){
+		return 'MOTHERSHIP AREA';
+	}
 	
 }
