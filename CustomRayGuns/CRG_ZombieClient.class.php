@@ -8,4 +8,6 @@ class CRG_ZombieClient{
     //TO DO
   }
 
+public function sendMessageToCRG($message){}
+
 }
