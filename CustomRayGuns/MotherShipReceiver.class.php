@@ -2,6 +2,8 @@
 
 namespace SC5050;
 
+// this class receives data from the remote clients
+
 class MotherShipReceiver{
     
     public function __construct(){}
