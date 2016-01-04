@@ -11,7 +11,7 @@ class AdminPageView{
 	
 	public function echoSC5050adminPage(){
         	$output = "admin area";
-require('getAddRaffleFormHTML');
+require('getAddRaffleFormHTML.php');
 $output = $output . getAddRaffleFormHTML();
         	$output = $output . $this->mothershipAdminArea();
 		echo $output;
