@@ -17,7 +17,7 @@ class RaffleCPTs{
 
 	}
 	function create_taxonomies() {
-		die('line 18 RaffleCPTs.class.php');
+		//die('line 18 RaffleCPTs.class.php');
 		$Raffle_type_args = array( 
 			'hierarchical' => true,  
 			'labels' => array(
