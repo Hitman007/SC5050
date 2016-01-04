@@ -11,11 +11,13 @@ class AdminPageView{
 	
 	public function echoSC5050adminPage(){
         	$output = "admin area";
+$AddRaffleForm = new AddRaffleForm;
+$output = $output . $AddRaffleForm->returnFormHTML();
         	$output = $output . $this->mothershipAdminArea();
 		echo $output;
 	}
 
-	public function mothershipAdmimArea(){
+	public function mothershipAdmimAreaHTML(){
 		return 'MOTHERSHIP AREA';
 	}
 	
