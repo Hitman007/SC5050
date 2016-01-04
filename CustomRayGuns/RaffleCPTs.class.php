@@ -1,5 +1,7 @@
 <?php
 
+namesapce SC5050;
+
 //This class creates the CPTs
 
 class RaffleCPTs{
