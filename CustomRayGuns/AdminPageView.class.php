@@ -17,7 +17,7 @@ $output = $output . getAddRaffleFormHTML();
 		echo $output;
 	}
 
-	public function getMothershipAdmimAreaHTML(){
+	public function getMothershipAdminAreaHTML(){
 		return 'MOTHERSHIP AREA';
 	}
 	
