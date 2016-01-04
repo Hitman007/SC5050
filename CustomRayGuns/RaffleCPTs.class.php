@@ -1,6 +1,6 @@
 <?php
 
-namesapce SC5050;
+namespace SC5050;
 
 //This class creates the CPTs
 
