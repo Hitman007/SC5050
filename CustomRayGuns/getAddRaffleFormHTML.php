@@ -2,4 +2,10 @@
 
 namespace SC5050;
 
-function getAddRaffleFormHTML(){}
+function getAddRaffleFormHTML(){
+
+$output = "FORM";
+
+return $output;
+
+}
