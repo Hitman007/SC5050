@@ -6,6 +6,8 @@ namespace SC5050;
 
 class TicketEmailHandler{
 
-	public function doSendCustomerTicketEmail(){}
+	public function doSendCustomerTicketEmail(){
+//Die('dosendcusromeremailticket');
+}
 
 }
