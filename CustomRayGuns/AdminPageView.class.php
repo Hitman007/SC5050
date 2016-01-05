@@ -13,7 +13,7 @@ class AdminPageView{
         	$output = "admin area";
 require('getAddRaffleFormHTML.php');
 $output = $output . getAddRaffleFormHTML();
-        	//$output = $output . $this->getMothershipAdminAreaHTML();
+        	$output = $output . $this->getMothershipAdminAreaHTML();
 		echo $output;
 	}
 
