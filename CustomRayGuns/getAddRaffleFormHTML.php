@@ -18,7 +18,7 @@ function getAddRaffleFormHTML(){
 <label for = 'raffle-time'>Raffle Time</label>
 <input type = 'text' id = 'raffle-time' />
 
-<input type = 'submit' value 'Submit' name = 'raffle-add-submit' />
+<input type = 'submit' value = 'Submit' name = 'raffle-add-submit' />
 
 </form>
 
