@@ -18,6 +18,10 @@ function getAddRaffleFormHTML(){
 <label for = 'raffle-time'>Raffle Time</label>
 <input type = 'text' id = 'raffle-time' />
 
+<label for = 'raffle-add'>Add Tickets Range:</label>
+min<input type = 'text' name = 'raffle-minimum' size = '5' /> - max<input type = 'text' name = 'raffle-max' size = '5' />
+
+
 <input type = 'submit' value = 'Submit' name = 'raffle-add-submit' />
 
 </form>
