@@ -30,4 +30,5 @@ global $productTextName; $productTextName = "50/50 Raffle Ticket";
 global $productPermalink; $productPermalink = "/index.php/product/5050-raffle-ticket/";
 
 //Woocommerce
-global $productsPageURL; $productsPageURL = "http://ec2-54-152-240-144.compute-1.amazonaws.com/wp-admin/edit.php?post_type=product";
+global $productsPageURL; 
+$productsPageURL = $CRG_homePageURL . "/wp-admin/edit.php?post_type=product";
