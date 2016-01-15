@@ -23,3 +23,5 @@ $I->wantTo("See that custom product is visable in the admin dashboard");
 $I->loginWordpressAs/*an*/('admin');
 $I->amOnUrl($productsPageURL);
 $I->/*should*/see($productTextName);
+
+// php codecept.phar run acceptance /var/www/html/wp-content/plugins/SC5050/tests/acceptance/CustomProductVisibleInDashboardCept.php --html -vvv

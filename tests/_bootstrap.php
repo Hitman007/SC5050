@@ -4,8 +4,8 @@ require(dirname(__FILE__)."/../CustomRayGuns/php-autoloader/autoloader.php");
 
 global $CRG_homePageURL;
 //$CRG_homePageURL = 'https://crg-remote-hitman007.c9users.io/';
-//$CRG_homePageURL = 'http://ec2-52-90-107-126.compute-1.amazonaws.com/';
-$CRG_homePageURL = 'http://ec2-52-91-45-213.compute-1.amazonaws.com';
+$CRG_homePageURL = 'http://localhost';
+//$CRG_homePageURL = 'http://ec2-52-91-45-213.compute-1.amazonaws.com';
 
 
 global $CRG_loginPageURL;
