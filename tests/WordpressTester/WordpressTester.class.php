@@ -1,6 +1,6 @@
 <?php
 
-//namespace CustomRayGuns;
+namespace CustomRayGuns;
 
 class WordpressTester extends \AcceptanceTester implements WordpressTesterInterface{
 	use AbilityToActivatePlugin_pluginName;

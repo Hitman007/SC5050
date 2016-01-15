@@ -8,7 +8,5 @@ trait AbilityToPurchaceRaffleTicket{
 	public function purchaseRaffleTicket($productPage){
         	$I = $this;
         	$I->purchaseWooProduct($productPage);
-        //throw new \Exception("function does not exist -- YET purchaceATicket()");
 	}
-	
 }

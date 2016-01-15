@@ -8,7 +8,7 @@ Story: The site sends data with every purchace to the motherShip
 */
 $I = /*am a */ new SC5050\SC5050Tester($scenario);
 $I->wantTo("Confirm Feature: The site sends data with every purchace to the motherShip");
-
+$I->fail('This test has not been implemented yet.');
 /*
 Scenario:
     When a user has purchased a ticket 
