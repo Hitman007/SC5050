@@ -1,11 +1,7 @@
 <?php
-
 //Creates a custom raffleproduct
-
 namespace SC5050;
-
 class RaffleProductCreator{
-
     public function createRaffleProduct(){
         global $CRG_productName;
         global $CRG_regularPrice;
@@ -17,7 +13,6 @@ class RaffleProductCreator{
             'post_parent' => '',
             'post_type' => "product",
         );
-
         //Create post:
         $post_id = wp_insert_post( $post, $wp_error );
         update_post_meta( $post_id, '_visibility', 'visible' );
@@ -26,6 +21,7 @@ class RaffleProductCreator{
         update_post_meta( $post_id, '_downloadable', 'no');
         update_post_meta( $post_id, '_virtual', 'yes');
         update_post_meta( $post_id, '_regular_price', $CRG_regularPrice);
-        update_post_meta( $post_id, '_sale_price', "1" );
+        update_post_meta( $post_id, '_sale_price', "123" );
+        update_post_meta( $post_id, '_price', "321" );
     }
 }

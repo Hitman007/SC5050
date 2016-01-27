@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomRayGuns;
+namespace SC5050;
 
 trait AbilityToSeePluginIsActivated_pluginName{
 	public function seePluginIsActivated($pluginName){

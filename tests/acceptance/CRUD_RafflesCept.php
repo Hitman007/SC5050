@@ -7,7 +7,7 @@ Feature: Admins can create, edit, and delete raffles
 */
 
 $I = /*am a */ new SC5050\SC5050Tester($scenario);
-$I->fail('This test has not been implemented yet.');
+//$I->fail('This test has not been implemented yet.');
 //$I = new AcceptanceTester($scenario);
 //$I->wantTo("Confirm Feature: Admins can create, edit, and delete raffles");
 

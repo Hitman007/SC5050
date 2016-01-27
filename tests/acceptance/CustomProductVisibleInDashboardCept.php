@@ -1,7 +1,7 @@
 <?php
 
 //Setup:
-$I = /*am a */ new CustomRayGuns\WordpressTester($scenario);
+$I = /*am a */ new SC5050\WordpressTester($scenario);
 global $CRG_homePageURL; //This variable is set in the tests/_bootstrap.php file
 global $CRG_pLuginUnderTestVerboseName; //This variable is set in the tests/_bootstrap.php file
 global $CRG_pluginUnderTestSlugName; //This variable is set in the tests/_bootstrap.php file

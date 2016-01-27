@@ -4,29 +4,71 @@ namespace SC5050;
 
 function getAddRaffleFormHTML(){
 	
-	//die('line 6 getAddRaffleFormHTML');
+	//die('line 7: getAddRaffleFormHTML.php is loaded.');
 	
-	$output = <<<formOutput
-<form name = 'crg-add-raffle-form' id = 'crg-add-raffle-form' method = 'post' />
+	$output = <<<formOutputHTML
 
-<label for = 'raffle-name' >Raffle Name</label>
-<input type = 'text' id = 'raffle-name' />
+<script>
+	jQuery(document).ready(function() {
+		//alert('jQuery Working!');
+	});
+</script>
 
-<label for = 'raffle-date' >Raffle Date</label>
-<input type = 'text' id = 'raffle-date' />
+<style>
+	#crg-add-raffle-form-div{border-style: solid; max-width: 35%; padding: 5px;}
+	.crg-add-raffle-form-inputs{float:right;}
+	.crg-add-raffle-form-labels{float:left;}
+	.crg-clear-fix{clear:both;width:100%;min-width:100%;}
+</style>
+			
+<div id = "crg-add-raffle-form-div">
+	<form name = 'crg-add-raffle-form' id = 'crg-add-raffle-form' method = 'post' />
 
-<label for = 'raffle-time'>Raffle Time</label>
-<input type = 'text' id = 'raffle-time' />
+		<div class = 'crg-add-raffle-form-labels'>
+			<label for = 'raffle-name' >
+				Raffle Name
+			</label>
+		</div><!- end: .crg-add-raffle-form-labels -->
+		<div class = 'crg-add-raffle-form-inputs'>
+			<input type = 'text' id = 'raffle-name' name = 'raffle-name' />
+		</div><!-- end: .crg-add-raffle-form-inputs -->
+		<div class = 'crg-clear-fix'>&nbsp;</div>
+	
 
-<label for = 'raffle-add'>Add Tickets Range:</label>
-min<input type = 'text' name = 'raffle-minimum' size = '5' /> - max<input type = 'text' name = 'raffle-max' size = '5' />
+		<div class = 'crg-add-raffle-form-labels'>
+			<label for = 'raffle-date' >
+				Raffle Date
+			</label>
+		</div><!- end: .crg-add-raffle-form-labels -->
+		<div class = 'crg-add-raffle-form-inputs'>
+			<input type = 'date' id = 'raffle-date' name = 'raffle-date' />
+		</div><!-- end: .crg-add-raffle-form-inputs -->
+		<div class = 'crg-clear-fix'>&nbsp;</div>
 
+		<div class = 'crg-add-raffle-form-labels'>
+			<label for = 'raffle-time'>
+				Raffle Time
+			</label>
+		</div><!- end: .crg-add-raffle-form-labels -->
+		<div class = 'crg-add-raffle-form-inputs'>
+			<input type = 'time' id = 'raffle-time' name = 'raffle-time' />
+		</div><!-- end: .crg-add-raffle-form-inputs -->
+		<div class = 'crg-clear-fix'>&nbsp;</div>
 
-<input type = 'submit' value = 'Submit' name = 'raffle-add-submit' />
+	Add Tickets Range:
+			
+	<label for = 'ticket-range-min'>min</label>
+	<input type = 'text' name = 'ticket-range-min' id = 'ticket-range-min' />
+			
+	<label for = 'ticket-range-max'>max</label>
+	<input type = 'text' name = 'ticket-range-max' id = 'ticket-range-min' />
 
-</form>
+	<input type = 'submit' value = 'Submit' name = 'raffle-add-submit' />
 
-formOutput;
+	</form>
+			
+</div><!-- #crg-add-raffle-form-div -->
+formOutputHTML;
 
 	return $output;
 }

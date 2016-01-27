@@ -10,15 +10,17 @@ class AdminPageView{
 	}
 	
 	public function echoSC5050adminPage(){
-        	$output = "admin area";
-require('getAddRaffleFormHTML.php');
-$output = $output . getAddRaffleFormHTML();
-        	$output = $output . $this->getMothershipAdminAreaHTML();
+		$output = "admin area";
+		require('getAddRaffleFormHTML.php');
+		$output = $output . getAddRaffleFormHTML();
+        $output = $output . $this->getMothershipAdminAreaHTML();
 		echo $output;
 	}
 
 	public function getMothershipAdminAreaHTML(){
-		return 'MOTHERSHIP AREA';
+		$Raffle = new Raffle();
+		$ID = $Raffle->get_ID();
+		return ($ID . 'MOTHERSHIP AREA AdminPageView.php');
 	}
 	
 }

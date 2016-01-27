@@ -1,6 +1,6 @@
 <?php
 
-namespace CustomRayGuns;
+namespace SC5050;
 
 class WoocommerceTester extends WordpressTester implements WoocommerceTesterInterface{
 	use AbilitToPurchaseWooProduct;

@@ -6,7 +6,7 @@ namespace Helper;
 
 class Acceptance extends \Codeception\Module
 {
-    public function loginAsAdmin()
+    public function goToGoogle()
     {
         $I = $this;
         //$I->wantTo('ssssssssssssssss');
