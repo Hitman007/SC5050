@@ -15,8 +15,10 @@ require 'CustomRayGuns/SC5050RequiredConstants.php';
 //This is the autoloader:
 require 'CustomRayGuns/php-autoloader/autoloader.php';
 
-//Setup Raffle Custom Post Types:
-$RaffleCPTs = new RaffleCPTs;
+//Sets up the Custom Post Type with CRUD
+$CPT_wCRUD = new CPT_wCRUD;
+$CPT_wCRUD->createCPTs();
+$CPT_wCRUD->listenForIncomingCPT_CRUD();
 
 //This script handles the plugin activation:
 require 'CustomRayGuns/SC5050ActivationScript.php';

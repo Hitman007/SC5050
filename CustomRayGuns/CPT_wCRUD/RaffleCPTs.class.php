@@ -12,10 +12,11 @@ class RaffleCPTs{
 		add_action( 'init', array( $this, 'create_taxonomies' ) );
 		add_action('init', array( $this, 'createRaffleCustomPostType' ) );
 	} 
+	
 	public function activate() {
 		$this->create_taxonomies();
-
 	}
+	
 	function create_taxonomies() {
 		//die('line 18 RaffleCPTs.class.php');
 		$Raffle_type_args = array( 

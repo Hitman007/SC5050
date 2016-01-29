@@ -55,15 +55,20 @@ function getAddRaffleFormHTML(){
 		</div><!-- end: .crg-add-raffle-form-inputs -->
 		<div class = 'crg-clear-fix'>&nbsp;</div>
 
-	Add Tickets Range:
+		<div class = 'crg-add-raffle-form-labels'>
+			Add Tickets Range:
+		</div>
 			
-	<label for = 'ticket-range-min'>min</label>
-	<input type = 'text' name = 'ticket-range-min' id = 'ticket-range-min' />
+		
+		<div class = 'crg-add-raffle-form-inputs'>			
+			<label for = 'ticket-range-min'>min</label>
+			<input type = 'text' name = 'ticket-range-min' id = 'ticket-range-min' size = '5' />
 			
-	<label for = 'ticket-range-max'>max</label>
-	<input type = 'text' name = 'ticket-range-max' id = 'ticket-range-min' />
-
-	<input type = 'submit' value = 'Submit' name = 'raffle-add-submit' />
+			<label for = 'ticket-range-max'>max</label>
+			<input type = 'text' name = 'ticket-range-max' id = 'ticket-range-min' size = '5' />
+		</div>
+		<div class = 'crg-clear-fix'>&nbsp;</div>
+		<input type = 'submit' value = 'Submit' name = 'crg-raffle-crud-form-submit-button' />
 
 	</form>
 			

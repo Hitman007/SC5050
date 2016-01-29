@@ -10,7 +10,7 @@ class AdminPageView{
 	}
 	
 	public function echoSC5050adminPage(){
-		$output = "admin area";
+		$output = "<h1>50/50 Charitable Raffles</h1>";
 		require('getAddRaffleFormHTML.php');
 		$output = $output . getAddRaffleFormHTML();
         $output = $output . $this->getMothershipAdminAreaHTML();
