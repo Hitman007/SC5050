@@ -14,5 +14,5 @@ GIVEN there is a product called "Raffle Ticket Product"
 WHEN a user purchases a "Raffle Ticket Product"
 THEN new PRTNs are assigned to a Raffle CPT
 AND the system should PRTNTicketCreator->createPRTNTicket($postID, $PRTN);
-AND each PRTN CPT TITLE is "Ticket: xxx for <a href = 'raffle permaklink'>Raffle</a> where xxx is the PRTN
+AND each PRTN CPT TITLE is "Ticket: xxx for <a href = 'raffle permaklink'>Raffle</a>" where xxx is the PRTN
 AND each PRTN CPT has post_meta_data("PRTN") which contains the actual PRTN data.
