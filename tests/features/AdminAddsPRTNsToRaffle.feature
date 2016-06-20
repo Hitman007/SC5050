@@ -11,6 +11,7 @@ SO that there are Raffle Product Tickets to available for purchase
 
 GIVEN there is a custom post type called "Raffle"
 GIVEN there is a product called "Raffle Ticket Product"
+GIVEN there is a CPT type called "PRTNTicket"
 WHEN a user purchases a "Raffle Ticket Product"
 THEN new PRTNs are assigned to a Raffle CPT
 AND the system should PRTNTicketCreator->createPRTNTicket($postID, $PRTN);
