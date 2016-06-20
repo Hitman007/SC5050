@@ -9,11 +9,24 @@ class AdminPageView{
 		add_menu_page( 'custom menu title', '50/50 Raffles', 'manage_options', 'raffle_page', array ($this, 'echoSC5050adminPage'), 'dashicons-tickets-alt', 6 );
 	}
 	
-	public function echoSC5050adminPage(){
+	//this functions returns the 'base' view for the admin page:
+	public function returnFirstView(){
 		$output = "<h1>50/50 Charitable Raffles</h1>";
-		require('getAddRaffleFormHTML.php');
-		$output = $output . getAddRaffleFormHTML();
-        $output = $output . $this->getMothershipAdminAreaHTML();
+		require('getAddNewCPTFormHTML.php');
+		$CPT_wCRUD = new CPT_wCRUD;
+		$output = $output . $CPT_wCRUD->returnCRUDformHTML();
+		$output = $output . $this->getMothershipAdminAreaHTML();
+		return $output;
+	}
+	
+	//this functions returns the manage tickets view for the admin page:
+	public function returnManageTicketsView(){
+		return "managge tickets view";
+	}
+	
+	
+	public function echoSC5050adminPage(){
+		$output = $this->returnFirstView();
 		echo $output;
 	}
 

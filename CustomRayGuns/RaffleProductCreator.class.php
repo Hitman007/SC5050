@@ -1,20 +1,23 @@
 <?php
 //Creates a custom raffleproduct
+
 namespace SC5050;
+
 class RaffleProductCreator{
-    public function createRaffleProduct(){
+	
+    public function createRaffleProduct($productName){
         global $CRG_productName;
         global $CRG_regularPrice;
         $post = array(
-            'post_author' => $user_id,
+            //'post_author' => $user_id,
             'post_content' => '',
             'post_status' => "publish",
-            'post_title' => $CRG_productName,
+            'post_title' => $productName,
             'post_parent' => '',
             'post_type' => "product",
         );
         //Create post:
-        $post_id = wp_insert_post( $post, $wp_error );
+        $post_id = wp_insert_post( $post );
         update_post_meta( $post_id, '_visibility', 'visible' );
         update_post_meta( $post_id, '_stock_status', 'instock');
         update_post_meta( $post_id, 'total_sales', '0');

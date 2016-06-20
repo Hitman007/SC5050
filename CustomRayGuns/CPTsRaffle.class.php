@@ -4,21 +4,26 @@ namespace SC5050;
 
 //This class creates the CPTs
 
-class RaffleCPTs{
+class CPTsRaffle{
 	
 	public $pluginDirectory; 
 	public function __construct() {
 		$this->pluginDirectory = plugin_dir_url(dirname( __FILE__ ));
 		add_action( 'init', array( $this, 'create_taxonomies' ) );
 		add_action('init', array( $this, 'createRaffleCustomPostType' ) );
-	} 
+		add_action('add_meta_boxes', array( $this, 'addCustomCPTsMetaBoxes' ));
+	}
+	
+	public function addCustomCPTsMetaBoxes(){
+		$CustomCPTsMetaBoxes = new CustomCPTsMetaBoxes;
+	}
 	
 	public function activate() {
 		$this->create_taxonomies();
 	}
 	
 	function create_taxonomies() {
-		//die('line 18 RaffleCPTs.class.php');
+		//die('line 18 CPTsRaffle.class.php');
 		$Raffle_type_args = array( 
 			'hierarchical' => true,  
 			'labels' => array(

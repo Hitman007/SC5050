@@ -16,10 +16,14 @@ class CPT_wCRUD implements CPT_wCRUDtemplate{
 	
 	public function createCPTs(){
 		//Setup Raffle Custom Post Types:
-		$RaffleCPTs = new RaffleCPTs;
+		$RaffleCPTs = new CPTsRaffle;
 	}
 	
-	public function returnCRUDformHTML(){}
+	public function returnCRUDformHTML(){
+		//this function retturns the specific Raffle CPT form
+		require_once 'getAddNewPTRNFormHTML.php';
+		return getAddNewCPTFormHTML();
+	}
 	
 	public function listenForIncomingCPT_CRUD(){
 		//This function checks that a CRUD is incomming

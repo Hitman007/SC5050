@@ -24,6 +24,9 @@ class IncommingCRUDsubmissionReceiver{
 		$post_id = wp_insert_post( $new_post );
 		$post_id = strval($post_id);
 		$this->editRecord($post_id);
+		$RaffleProductCreator = new RaffleProductCreator;
+		$productName = $_POST['raffle-name'];
+		$RaffleProductCreator->createRaffleProduct($productName);
 	}
 	
 	public function editRecord($post_id){

@@ -12,3 +12,4 @@ modules:
          browser: firefox
          window_size: maximum
       - \Helper\Acceptance
+      - Asserts

@@ -9,10 +9,12 @@ class NextAvailableTicketNumber{}
 class Raffle extends AbstractRaffle{
 	
 	public $ID = 7;
-	
+
 }
 
 abstract class AbstractRaffle{
+	
+	//This is the Wordpress CPT ID # associated with the raffle
 	public $ID;
 	
 	public $name;
@@ -26,8 +28,6 @@ abstract class AbstractRaffle{
 	public $raffleTicketNumbers;
 	
 	public function get_ID(){
-	
 		return $this->ID;
-	
 	}
 }

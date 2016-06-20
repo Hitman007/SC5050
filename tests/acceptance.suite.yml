@@ -8,7 +8,7 @@ class_name: AcceptanceTester
 modules:
     enabled:
       - WebDriver:
-         url: 'https://crg-remote-hitman007.c9users.io/'
+         url: 'https://localhost/'
          browser: firefox
          window_size: maximum
       - \Helper\Acceptance

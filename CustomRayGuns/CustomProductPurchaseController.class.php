@@ -5,9 +5,8 @@ namespace SC5050;
 //This class detects, then does something when a product is purchased
 class CustomProductPurchaseController{
     
-    //This function is fired after the thank you event is detected. As of now the only security is the get variable sc5050
-	public function doSendProductInfoToMotherShip(){
-		die('line 10 CustomProductPurchaseController');
+    //This function is fired after the thank you event is detected. 
+    die('line 10 CustomProductPurchaseController');
 		$infoCompiler = new infoCompiler;
 		$dataPackage = $infoCompiler->dataPackage;
 		$string = "https://crg-remote-hitman007.c9users.io?sc5050=$dataPackage";

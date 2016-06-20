@@ -9,19 +9,20 @@ Story: The site sends data with every purchace to the motherShip
 $I = /*am a */ new SC5050\SC5050Tester($scenario);
 $I->wantTo("Confirm Feature: The site sends data with every purchace to the motherShip");
 $I->fail('This test has not been implemented yet.');
+
 /*
 Scenario:
     When a user has purchased a ticket 
     Then the information is sent to $motherShip sendInfoToMotherShip();
 */
-global $productPermalink; global $CRG_homePageURL; $productPage = $CRG_homePageURL . $productPermalink;
-$I->purchaseRaffleTicket($productPage);
-$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
+//global $productPermalink; global $CRG_homePageURL; $productPage = $CRG_homePageURL . $productPermalink;
+//$I->purchaseRaffleTicket($productPage);
+//$I->confirmPurchaseInfoHasBeenReceivedOnTheMotherShip();
 
 /*
 Scenario:
     When a user has purchased a ticket
     Then they receive an email with the ticket info
 */
-$I->confirmEmailHasBeenReceived();
+//$I->confirmEmailHasBeenReceived();
 
