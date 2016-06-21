@@ -17,3 +17,5 @@ AND I see a meta box called "Tickets"
 THEN the meta box should populate with a loop query the query should search for PRTNTicket CPTs associated with that raffle CPT
 AND the meta box should populate with icons for deleting and the ticket number
 AND each ticket number should be ancor linked to the permalink of the PRTNTicket
+AND each ticket number snould have an icon to represent it's status
+AND since there are many tickets, the output is set to 25%EM
