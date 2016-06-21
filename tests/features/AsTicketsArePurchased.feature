@@ -1,4 +1,4 @@
-As a the system
+As a customer
 I want to purchase tickets
 
 PISQ = product inventory stock quantity
@@ -6,9 +6,11 @@ PRTN = physical raffle ticket number
 
 Feature PRTN
 
-When a user purchases a Raffle Ticket Product
-Then PRTNs are assigned to each order, per quantity.
-And PRTNs are emailed to the customer with their confirmation email.
+WHEN I purchase a Raffle Ticket Product
+THEN PRTNs are assigned to each order, per quantity.
+AND PRTNs are emailed to the customer with their confirmation email.
+AND the content of the PRTNTicket CPT is changed to 'This ticket has been sold'
+AND the post meta data is changed to reflect the customer ID
 
 The system should control the PISQ available for purchase in Woo commerce.
 
