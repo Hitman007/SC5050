@@ -4,8 +4,6 @@ I want to purchase tickets
 PISQ = product inventory stock quantity
 PRTN = physical raffle ticket number
 
-Feature PRTN
-
 WHEN I purchase a Raffle Ticket Product
 THEN PRTNs are assigned to each order, per quantity.
 AND PRTNs are emailed to the customer with their confirmation email.
