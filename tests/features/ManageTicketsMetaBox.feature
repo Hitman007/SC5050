@@ -10,9 +10,9 @@ I want to manage tickets from the post.php edit screen
 SO that I can manage tickets from available tickets sold
 
 GIVEN there is a custom post type called "Raffle"
-GIVEN there is a product called "Raffle Ticket Product"
-GIVEN there is a CPT type called "PRTNTicket"
-THEN I should see a meta box called "tickets"
-AND and the meta box should populate with a loop query the query should search for CPTs associated with that raffle CPT
+AND there is a product called "Raffle Ticket Product"
+AND there is a CPT type called "PRTNTicket"
+WHEN I see a meta box called "Tickets"
+THEN the meta box should populate with a loop query the query should search for PRTNTicket CPTs associated with that raffle CPT
 AND the meta box should populate with icons for deleting and the ticket number
-AND each ticket number should be ancor linked to the permalink
+AND each ticket number should be ancor linked to the permalink of the PRTNTicket
