@@ -12,7 +12,8 @@ SO that I can manage tickets from available tickets sold
 GIVEN there is a custom post type called "Raffle"
 AND there is a product called "Raffle Ticket Product"
 AND there is a CPT type called "PRTNTicket"
-WHEN I see a meta box called "Tickets"
+WHEN I navigate to /wp-admin/post.php?action=edit
+AND I see a meta box called "Tickets"
 THEN the meta box should populate with a loop query the query should search for PRTNTicket CPTs associated with that raffle CPT
 AND the meta box should populate with icons for deleting and the ticket number
 AND each ticket number should be ancor linked to the permalink of the PRTNTicket
