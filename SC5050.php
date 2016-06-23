@@ -65,7 +65,8 @@ add_action('admin_enqueue_scripts', 'SC5050\add_e2_date_picker');
 
 function add_e2_date_picker(){
 	//jQuery UI date picker file
+	//wp_enqueue_script('jquery-ui');
 	wp_enqueue_script('jquery-ui-datepicker');
 	//jQuery UI theme css file
-	//wp_enqueue_style('e2b-admin-ui-css','http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css',false,"1.9.0",false);
+	wp_enqueue_style('jquery-ui-css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 }

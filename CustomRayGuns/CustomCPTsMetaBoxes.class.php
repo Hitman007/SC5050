@@ -24,13 +24,9 @@ class CustomCPTsMetaBoxes{
 			$dateString = $date[0];
 		}
 		echo "
-
-<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css' >
-
-
 <script>
 	jQuery(document).ready(function(){
-   		jQuery( '.datepicker' ).datepicker({
+   		jQuery( '.custom_date' ).datepicker({
        dateFormat: 'yy/mm/dd',
         changeMonth: true,
         changeYear: true,
@@ -46,7 +42,7 @@ class CustomCPTsMetaBoxes{
 </div>
 <!- end: .crg-add-raffle-form-labels -->
 <div class = 'crg-add-raffle-form-inputs'>
-   <input type = 'text' id = 'SC5050-raffle-date' name = 'SC5050-raffle-date' class = 'datepicker' />
+   <input type = 'text' id = 'SC5050-raffle-date' name = 'SC5050-raffle-date' class = 'custom_date' />
 </div>
 <!-- end: .crg-add-raffle-form-inputs -->
 <div class = 'crg-clear-fix'>&nbsp;</div>
