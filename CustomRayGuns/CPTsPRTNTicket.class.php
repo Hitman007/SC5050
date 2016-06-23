@@ -11,12 +11,9 @@ class CPTsPRTNTicket{
 		$this->pluginDirectory = plugin_dir_url(dirname( __FILE__ ));
 		add_action( 'init', array( $this, 'create_taxonomies' ) );
 		add_action('init', array( $this, 'createPRTNTicketCustomPostType' ) );
-		add_action('add_meta_boxes', array( $this, 'addCustomCPTsMetaBoxes' ));
+
 	}
 
-	public function addCustomCPTsMetaBoxes(){
-		$CustomCPTsMetaBoxes = new CustomCPTsMetaBoxes;
-	}
 
 	public function activate() {
 		$this->create_taxonomies();

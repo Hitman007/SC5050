@@ -15,3 +15,4 @@ The system should control the PISQ available for purchase in Woo commerce.
 
 The normal default Woocommerce PISQ controller is disabled.
 
+https://codex.wordpress.org/Plugin_API/Action_Reference/save_post

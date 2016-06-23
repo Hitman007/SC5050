@@ -23,7 +23,6 @@ class CPTsRaffle{
 	}
 	
 	function create_taxonomies() {
-		//die('line 18 CPTsRaffle.class.php');
 		$Raffle_type_args = array( 
 			'hierarchical' => true,  
 			'labels' => array(

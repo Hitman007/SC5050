@@ -48,31 +48,24 @@ function launchAdminView(){
 	$AdminPageView = new AdminPageView;
 }
 
-
-function smashing_add_post_meta_boxes() {
-	die('line 52');
-	add_meta_box(
-			'smashing-post-class',      // Unique ID
-			esc_html__( 'Post Class', 'example' ),    // Title
-			'smashing_post_class_meta_box',   // Callback function
-			'post',         // Admin page (or post type)
-			'side',         // Context
-			'default'         // Priority
-			);
+add_action('add_meta_boxes', 'SC5050\addCustomCPTsMetaBoxes' );
+//Add custom meta boxes to CPTs:
+function addCustomCPTsMetaBoxes(){
+	$CustomCPTsMetaBoxes = new CustomCPTsMetaBoxes;
 }
-function smashing_post_class_meta_box( $object, $box ) { ?>
 
-  <?php wp_nonce_field( basename( __FILE__ ), 'smashing_post_class_nonce' ); ?>
+$MetaBoxListeners = new MetaBoxListeners;
 
-  <p>
-    <label for="smashing-post-class"><?php _e( "Add a custom CSS class, which will be applied to WordPress' post class.", 'example' ); ?></label>
-    <br />
-    <input class="widefat" type="text" name="smashing-post-class" id="smashing-post-class" value="<?php echo esc_attr( get_post_meta( $object->ID, 'smashing_post_class', true ) ); ?>" size="30" />
-  </p>
-<?php }
-/* Meta box setup function. */
-function smashing_post_meta_boxes_setup() {
+//wp-includes/js/jquery/ui/datepicker.min.js
 
-	/* Add meta boxes on the 'add_meta_boxes' hook. */
-	add_action( 'add_meta_boxes', 'smashing_add_post_meta_boxes' );
+//wp_enqueue_script('jquery-ui-datepicker');
+
+
+add_action('admin_enqueue_scripts', 'SC5050\add_e2_date_picker');
+
+function add_e2_date_picker(){
+	//jQuery UI date picker file
+	wp_enqueue_script('jquery-ui-datepicker');
+	//jQuery UI theme css file
+	//wp_enqueue_style('e2b-admin-ui-css','http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css',false,"1.9.0",false);
 }
