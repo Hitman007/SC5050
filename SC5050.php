@@ -56,17 +56,15 @@ function addCustomCPTsMetaBoxes(){
 
 $MetaBoxListeners = new MetaBoxListeners;
 
-//wp-includes/js/jquery/ui/datepicker.min.js
+add_action('admin_enqueue_scripts', 'SC5050\addDatePicker');
 
-//wp_enqueue_script('jquery-ui-datepicker');
-
-
-add_action('admin_enqueue_scripts', 'SC5050\add_e2_date_picker');
-
-function add_e2_date_picker(){
-	//jQuery UI date picker file
-	//wp_enqueue_script('jquery-ui');
+function addDatePicker(){
 	wp_enqueue_script('jquery-ui-datepicker');
-	//jQuery UI theme css file
+	//wp_enqueue_script('jquery-ui');
 	wp_enqueue_style('jquery-ui-css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
+}
+
+add_action( 'save_post_raffle', 'SC5050\wpse63478_save' );
+function wpse63478_save() {
+//die('joy');
 }
