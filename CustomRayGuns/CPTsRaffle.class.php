@@ -15,7 +15,7 @@ class CPTsRaffle{
 	}
 	
 	public function addCustomCPTsMetaBoxes(){
-		$CustomCPTsMetaBoxes = new CustomCPTsMetaBoxes;
+		$CustomCPTsMetaBoxes = new RaffleCPTsMetaBoxes;
 	}
 	
 	public function activate() {

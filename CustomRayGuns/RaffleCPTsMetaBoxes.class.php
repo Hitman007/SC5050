@@ -2,7 +2,9 @@
 
 namespace SC5050;
 
-class CustomCPTsMetaBoxes{
+//"Meta boxes" appear in the add new and edit post admin pages.
+
+class RaffleCPTsMetaBoxes{
 	
 	public function __construct() {
 		add_meta_box('SC5050-raffle-date-meta-box', __( 'Raffle Date' ),array( $this,'echoRaffleDateMetaBox'),'Raffle', 'side', 'high');
@@ -23,64 +25,20 @@ class CustomCPTsMetaBoxes{
 			$raffleDate = __('Raffle Date');
 			$raffleTime = __('Raffle Time');
 		
+
 		$dateString = "";
 		$timeString = "";
 		$crg_ID = "";
 		if (isset($_GET['post'])){
 			$crg_ID = $_GET['post'];
-			$dateArray = get_post_meta($crg_ID, 'raffle_date');
-			if (is_array($dateArray)){
-				if(isset($dateArray[0])){
-					$dateString = $dateArray[0];
-				 }else{
-				 	$dateString = "";
-				 }
-			}else{
-				$dateString = $dateArray;
-			}
-			//$timeString = get_post_meta($crg_ID, 'raffle_time');
+			$dateString = $this->returnDateFromDatabase($crg_ID);
+			$timeString = $this->returnTimeFromDatabase($crg_ID);
 		}
-
-		
-		$output = "
-<script>
-	jQuery(document).ready(function(){
-   		jQuery( '#SC5050-raffle-date' ).datepicker({
-       		dateFormat: 'yy/mm/dd',
-        	changeMonth: true,
-        	changeYear: true,
-        	yearRange: '-100:+0'
-        });
-   	 	jQuery('#SC5050-raffle-time').timepicker();
-    
-	});
-</script>
-<link rel='stylesheet' href='http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css'>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js'></script>
-<div class = 'crg-add-raffle-form-labels'>
-
-   $raffleDate
-
-</div>
-<!-- end: .crg-add-raffle-form-labels -->
-<div class = 'crg-add-raffle-form-inputs'>
-   <input type = 'text' id = 'SC5050-raffle-date' name = 'SC5050-raffle-date' class = 'SC5050-custom-date' value = '$dateString' />
-</div>
-<input type = 'hidden' id = 'SC5050-hidden-post-id' name = 'SC5050-hidden-post-id' value = '$crg_ID' />
-<!-- end: .crg-add-raffle-form-inputs -->
-<div class = 'crg-clear-fix'>&nbsp;</div>
-<div class = 'crg-add-raffle-form-labels'>
-
-   $raffleTime
-
-</div>
-<!-- end: .crg-add-raffle-form-labels -->
-<div class = 'crg-add-raffle-form-inputs'>
-   <input type = 'text' id = 'SC5050-raffle-time' name = 'SC5050-raffle-time' class = 'SC5050-raffle-time' value = '$timeString' />
-</div>
-<!-- end: .crg-add-raffle-form-inputs -->
-<div class = 'crg-clear-fix'>&nbsp;</div>
-";
+		wp_enqueue_script( 'metaBoxTimePicker', plugins_url('/SC5050/CustomRayGuns/metaBoxTimePicker.js'));
+		wp_enqueue_style('metaBoxDateTimePickerStyle', 'http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css');
+		wp_enqueue_script('remoteTimePickerScript', 'http://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js');
+		$unlocalizedRaffleDateTimeMetaBoxHTML = new unlocalizedRaffleDateTimeMetaBoxHTML;
+		$output = $unlocalizedRaffleDateTimeMetaBoxHTML->ReturnUnlocalizedRaffleDateTimeMetaBoxHTML($raffleDate, $dateString, $crg_ID, $raffleTime, $timeString);
 		$output = $this->checkIfNewPost($output);
 		echo $output;
 	}
@@ -110,10 +68,10 @@ class CustomCPTsMetaBoxes{
             $addTicketsRange
          </div>
          <div class = 'crg-add-raffle-form-inputs'>
-            <label for = 'ticket-range-min'>$min</label>
-            <input type = 'text' name = 'ticket-range-min' id = 'ticket-range-min' size = '5' />
-            <label for = 'ticket-range-max'>$max</label>
-            <input type = 'text' name = 'ticket-range-max' id = 'ticket-range-min' size = '5' />
+            <label for = 'SC5050-ticket-range-min'>$min</label>
+            <input type = 'text' name = 'SC5050-ticket-range-min' id = 'SC5050-ticket-range-min' size = '5' />
+            <label for = 'SC5050-ticket-range-max'>$max</label>
+            <input type = 'text' name = 'SC5050-ticket-range-max' id = 'SC5050-ticket-range-max' size = '5' />
          </div>
          <div class = 'crg-clear-fix'>&nbsp;</div>
      
@@ -121,11 +79,10 @@ class CustomCPTsMetaBoxes{
             $addOneTicket
          </div>
          <div class = 'crg-add-raffle-form-inputs'>
-            <label for = 'ticket-one'>#</label>
-            <input type = 'text' name = 'ticket-one' id = 'ticket-one' size = '5' />
+            <label for = 'SC5050-ticket-one'>#</label>
+            <input type = 'text' name = 'SC5050-ticket-one' id = 'SC5050-ticket-one' size = '5' />
          </div>
 		 <div class = 'crg-clear-fix'>&nbsp;</div>
-         <input type = 'submit' value = '$addTickets' name = 'crg-raffle-crud-form-submit-button' />
       </div><!-- END:#crg-add-raffle-form-revealed-area -->
 </div><!-- #crg-add-raffle-form-div -->
 formOutputHTML;
@@ -143,6 +100,11 @@ formOutputHTML;
 		$output = <<<formOutputHTML
 THIS IS A METABOX
 formOutputHTML;
+		
+		$fileName = realpath(dirname(__FILE__)) . "/manageTicketsMetaBoxDiv.html";
+		//die($fileName);
+		$output = file_get_contents($fileName);
+
 	
 		//Checks to see if it's an unsaved post:
 		$fileName =  basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
@@ -150,4 +112,36 @@ formOutputHTML;
 		echo $output;
 		
 	}
+	
+	public function returnDateFromDatabase($crg_ID){
+		$dateString = "";
+		$dateArray = get_post_meta($crg_ID, 'raffle_date');
+		if (is_array($dateArray)){
+			if(isset($dateArray[0])){
+				$dateString = $dateArray[0];
+			 }else{
+				$dateString = "";
+			}
+		 }else{
+			$dateString = $dateArray;
+			die('158');
+		}
+		return $dateString;
+	}
+	
+	public function returnTimeFromDatabase($crg_ID){
+		$timeString = NULL;
+		$timeArray = get_post_meta($crg_ID, 'raffle_time');
+		if (is_array($timeArray)){
+			if(isset($timeArray[0])){
+				$timeString = $timeArray[0];
+			}else{
+				$timeString = "";
+			}
+		}else{
+			$timeString = $timeArray;
+		}
+		return $timeString;
+	}
+	
 }

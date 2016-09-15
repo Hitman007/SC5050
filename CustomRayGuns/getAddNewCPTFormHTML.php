@@ -63,10 +63,10 @@ function getAddNewCPTFormHTML(){
             Add Tickets Range:
          </div>
          <div class = 'crg-add-raffle-form-inputs'>			
-            <label for = 'ticket-range-min'>min</label>
-            <input type = 'text' name = 'ticket-range-min' id = 'ticket-range-min' size = '5' />
-            <label for = 'ticket-range-max'>max</label>
-            <input type = 'text' name = 'ticket-range-max' id = 'ticket-range-min' size = '5' />
+            <label for = 'SC5050-ticket-range-min'>mindsfasdf</label>
+            <input type = 'text' name = 'SC5050-ticket-range-min' id = 'SC5050-ticket-range-max' size = '5' />
+            <label for = 'SC5050-ticket-range-max'>max</label>
+            <input type = 'text' name = 'SC5050-ticket-range-max' id = 'SC5050-ticket-range-max' size = '5' />
          </div>
          <div class = 'crg-clear-fix'>&nbsp;</div>
          
@@ -74,8 +74,8 @@ function getAddNewCPTFormHTML(){
             Add one ticket:
          </div>
          <div class = 'crg-add-raffle-form-inputs'>			
-            <label for = 'ticket-one'>#</label>
-            <input type = 'text' name = 'ticket-one' id = 'ticket-one' size = '5' />
+            <label for = 'SC5050-ticket-one'>#</label>
+            <input type = 'text' name = 'SC5050-ticket-one' id = 'SC5050-ticket-one' size = '5' />
          </div>
 		 <div class = 'crg-clear-fix'>&nbsp;</div>
 		 <a>Manage Tickets</a>

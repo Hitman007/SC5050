@@ -1,5 +1,7 @@
 <?php
 
+//die ('RequiredConstants');
+
 //These are required global variables:
 
 global $CRG_productName;

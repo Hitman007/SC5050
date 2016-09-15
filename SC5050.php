@@ -10,20 +10,14 @@ Author URI: http://SC5050.com/
 
 namespace SC5050;
 
-require 'CustomRayGuns/SC5050RequiredConstants.php';
-
 //This is the autoloader:
 require 'CustomRayGuns/php-autoloader/autoloader.php';
 
-//Sets up the Custom Post Type with CRUD
-$CPT_wCRUD = new CPT_wCRUD;
-$CPT_wCRUD->createCPTs();
-$CPT_wCRUD->listenForIncomingCPT_CRUD();
+$SC5050Plugin = new SC5050Plugin;
 
-$TicketCPTs = new CPTsPRTNTicket;
-
-//This script handles the plugin activation:
-require 'CustomRayGuns/SC5050ActivationScript.php';
+$SC5050Plugin->sellTickets();
+$SC5050Plugin->manageRaffles();
+//$SC5050Plugin->trackSales();
 
 /*
  * This class controlls the purchasing of the products. The purpose of this
@@ -36,7 +30,7 @@ function lauchCustomProductPurchaseController(){
 	$CustomProductPurchaseController->doSendProductInfoToMotherShip();
 }
 
-/* This section is for the CRG admin area. */
+/* This section is for the CRG admin area. 
 //this conditional should be changed to something more secure
 if (isset($_GET['sc5050'])){
 	$MotherShipReceiver = new MotherShipReceiver;
@@ -47,22 +41,8 @@ add_action( 'admin_menu', 'SC5050\launchAdminView' );
 function launchAdminView(){
 	$AdminPageView = new AdminPageView;
 }
+*/
 
-add_action('add_meta_boxes', 'SC5050\addCustomCPTsMetaBoxes' );
-//Add custom meta boxes to CPTs:
-function addCustomCPTsMetaBoxes(){
-	$CustomCPTsMetaBoxes = new CustomCPTsMetaBoxes;
-}
-
-$MetaBoxListeners = new MetaBoxListeners;
-
-add_action('admin_enqueue_scripts', 'SC5050\addDatePicker');
-
-function addDatePicker(){
-	wp_enqueue_script('jquery-ui-datepicker');
-	//wp_enqueue_script('jquery-ui');
-	wp_enqueue_style('jquery-ui-css', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
-}
 
 add_action( 'save_post_raffle', 'SC5050\wpse63478_save' );
 function wpse63478_save() {

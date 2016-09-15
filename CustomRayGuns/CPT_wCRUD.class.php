@@ -16,7 +16,7 @@ class CPT_wCRUD implements CPT_wCRUDtemplate{
 	
 	public function createCPTs(){
 		//Setup Raffle Custom Post Types:
-		$RaffleCPTs = new CPTsRaffle;
+		//$RaffleCPTs = new CPTsRaffle;
 	}
 	
 	public function returnCRUDformHTML(){
