@@ -20,7 +20,6 @@ class AddTicketsMetaBoxListener{
 		}else{
 			die('invalid');
 		}
-		*/
 	}
 	
 	public function registerError(){}
