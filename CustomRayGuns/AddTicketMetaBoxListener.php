@@ -16,10 +16,10 @@ class AddTicketsMetaBoxListener{
 		//$tmr = $_POST[''];
 		//$to = $_POST[''];
 		//$tmr = (int)$ticketOne;
-		//if (is_int($ticketOne)){
-			die("$ticketOne validoo");
+		if (is_int($ticketOne)){
+			die("validoo");
 		}else{
-			die("$ticketOne INVALID!");
+			die("INVALID!");
 		}
 	}
 	
