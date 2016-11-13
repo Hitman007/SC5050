@@ -13,13 +13,13 @@ class AddTicketsMetaBoxListener{
 	
 	public function validateIncoming(){
 		$ticketOne = $_POST['SC5050-ticket-one'];
-		$tmr = $_POST[''];
-		$to = $_POST[''];
-		$tmr = (int)$ticketOne;
-		if (is_int($ticketOne)){
-			die('validoo');
+		//$tmr = $_POST[''];
+		//$to = $_POST[''];
+		//$tmr = (int)$ticketOne;
+		//if (is_int($ticketOne)){
+			die("$ticketOne validoo");
 		}else{
-			die('invalid');
+			die("$ticketOne INVALID!");
 		}
 	}
 	
