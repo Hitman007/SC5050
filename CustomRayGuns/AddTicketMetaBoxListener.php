@@ -16,6 +16,7 @@ class AddTicketsMetaBoxListener{
 		//$tmr = $_POST[''];
 		//$to = $_POST[''];
 		//$tmr = (int)$ticketOne;
+		echo ($ticketOne) . "<br />";
 		if (is_int($ticketOne)){
 			die("validoo");
 		}else{
