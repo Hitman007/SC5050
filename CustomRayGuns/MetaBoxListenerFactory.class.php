@@ -53,6 +53,6 @@ class MetaBoxListenersFactory{
 				$PASS = TRUE;
 			}
 		}
-		if ($PASS == TRUE){die('true');}
+		if ($PASS == TRUE){die('MetaBoxListenersFactory line 56:');}
 	}
 }
