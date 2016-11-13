@@ -19,7 +19,7 @@ class MetaBoxListenersFactory{
 	
 	public function listenToAddTickets(){
 		//die('listenToAddTickets - 23');
-		$AddTicketMetaBoxCreator = new AddTicketsMetaBoxListener;
+		$AddTicketsMetaBoxListener = new AddTicketsMetaBoxListener;
 	}
 
 	public function dateTimeListenerConditionalBoolean(){
@@ -53,6 +53,6 @@ class MetaBoxListenersFactory{
 				$PASS = TRUE;
 			}
 		}
-		if ($PASS == TRUE){die('MetaBoxListenersFactory line 56:');}
+		if ($PASS == TRUE){return TRUE;}else{return FALSE;}
 	}
 }

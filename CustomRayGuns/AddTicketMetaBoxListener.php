@@ -8,6 +8,7 @@ class AddTicketsMetaBoxListener{
 	
 	public function __construct(){
 		$this->validateIncoming();
+		die ("AddTicketsMetaBoxListener line 11");
 	}
 	
 	public function validateIncoming(){
