@@ -15,8 +15,8 @@ class AddTicketsMetaBoxListener{
 		$ticketOne = $_POST['SC5050-ticket-one'];
 		$tmr = $_POST[''];
 		$to = $_POST[''];
-		$tmr = (int)$x;
-		if (is_int($x)){
+		$tmr = (int)$$ticketOne;
+		if (is_int($$ticketOne)){
 			die('validoo');
 		}else{
 			die('invalid');
