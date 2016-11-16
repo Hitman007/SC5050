@@ -21,21 +21,22 @@ class AddTicketsMetaBoxListener{
 	
 	public function createPRTNTicket($postID, $PRTN){
 		//die('createPRTNTicket');
-// Gather post data.
-/*
-$my_post = array(
-    'post_title'    => 'My post',
-    'post_content'  => 'This is my post.',
-    'post_status'   => 'publish',
-    'post_author'   => 1
-);
+		// Gather post data.
+
+		$my_post = array(
+ 			'post_title'    => 'WTF',
+   			'post_content'  => 'This is my post.',
+    		'post_status'   => 'publish',
+    		'post_author'   => 1,
+			'post_type'		=> 'PRTNTickets',
+		);
  
-// Insert the post into the database.
-wp_insert_post( $my_post );
+		// Insert the post into the database.
+		wp_insert_post( $my_post );
 	}
 
 	public function createPRTNTicketRange($minPRTN, $maxPRTN){
 		
 	}
-*/
+
 }

@@ -9,7 +9,7 @@ class MetaBoxListenersFactory{
 			add_action('save_post', array( $this, 'listenToDateTime' ));
 		}
 		if ($this->addTicketsListenerConditionalBoolean()){
-			add_action('save_post', array( $this, 'listenToAddTickets' ));
+			add_action('init', array( $this, 'listenToAddTickets' ));
 		}
 	}
 
@@ -31,6 +31,7 @@ class MetaBoxListenersFactory{
 			return FALSE;
 		}
 	}
+	
 	public function addTicketsListenerConditionalBoolean(){
 		$PASS = FALSE;
 		if (isset($_POST['SC5050-ticket-range-min'])){
@@ -53,6 +54,6 @@ class MetaBoxListenersFactory{
 				$PASS = TRUE;
 			}
 		}
-		if ($PASS == TRUE){return TRUE;}else{return FALSE;}
+		return $PASS;
 	}
 }
