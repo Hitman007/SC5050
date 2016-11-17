@@ -18,7 +18,6 @@ class MetaBoxListenersFactory{
 	}
 	
 	public function listenToAddTickets(){
-		//die('listenToAddTickets - 23');
 		$AddTicketsMetaBoxListener = new AddTicketsMetaBoxListener;
 	}
 
