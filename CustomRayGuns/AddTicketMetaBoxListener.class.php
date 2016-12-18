@@ -28,6 +28,11 @@ class AddTicketsMetaBoxListener{
 		wp_insert_post( $my_post );
 	}
 
-	public function createPRTNTicketRange($minPRTN, $maxPRTN){}
-
+	public function createPRTNTicketRange($minPRTN, $maxPRTN){
+		$postID  = $_POST['SC5050-hidden-post-id'];
+		while($minPRTN < $maxPRTN){
+			$this->createPRTNTicket($postID, $minPRTN);
+			$minPRTN++;
+		}
+	}
 }
